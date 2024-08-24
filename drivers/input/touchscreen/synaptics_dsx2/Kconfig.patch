@@ -1,0 +1,15 @@
+diff --git a/drivers/input/touchscreen/synaptics_dsx2/Kconfig b/drivers/input/touchscreen/synaptics_dsx2/Kconfig
+new file mode 100644
+index 000000000000..6437ceb18329
+--- /dev/null
++++ b/drivers/input/touchscreen/synaptics_dsx2/Kconfig
+@@ -0,0 +1,9 @@
++#
++# SYNAPTICS TOUCH driver configuration
++#
++
++config TOUCHSCREEN_SYNAPTICS_I2C_DSX2
++	tristate "Synaptics DSX2 i2c touchscreen base on bootloader Ver7"
++	depends on I2C
++	help
++	  This enables support for Synaptics DSX2 over I2C based touchscreens.

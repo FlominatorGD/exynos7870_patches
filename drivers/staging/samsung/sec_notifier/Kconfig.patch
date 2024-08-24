@@ -1,0 +1,18 @@
+diff --git a/drivers/staging/samsung/sec_notifier/Kconfig b/drivers/staging/samsung/sec_notifier/Kconfig
+new file mode 100644
+index 000000000000..f48da9c8956a
+--- /dev/null
++++ b/drivers/staging/samsung/sec_notifier/Kconfig
+@@ -0,0 +1,12 @@
++#
++# notifier
++#
++
++comment "NOTIFIER configs"
++
++config VBUS_NOTIFIER
++	bool "VBUS notifier support"
++	default n
++	help
++	  If you say yes here you will get support for
++	  the VBUS status change notification.

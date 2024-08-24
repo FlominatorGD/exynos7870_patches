@@ -1,0 +1,18 @@
+diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
+index 6f299cd54e6d..93d99ae750ec 100644
+--- a/drivers/hid/Kconfig
++++ b/drivers/hid/Kconfig
+@@ -746,6 +746,13 @@ config SMARTJOYPLUS_FF
+ 	Say Y here if you have a SmartJoy PLUS PS2/USB adapter and want to
+ 	enable force feedback support for it.
+ 
++config HID_SYNAPTICS_BT
++	tristate "HID Synaptics"
++	depends on HID
++	default n
++	---help---
++	For a Bluetooth HID touchpad
++
+ config HID_TIVO
+ 	tristate "TiVo Slide Bluetooth remote control support"
+ 	depends on HID

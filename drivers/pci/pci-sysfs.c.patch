@@ -1,0 +1,13 @@
+diff --git a/drivers/pci/pci-sysfs.c b/drivers/pci/pci-sysfs.c
+index 6743ee0ffd0f..0aeed57b501f 100644
+--- a/drivers/pci/pci-sysfs.c
++++ b/drivers/pci/pci-sysfs.c
+@@ -552,7 +552,7 @@ static ssize_t driver_override_show(struct device *dev,
+ 	ssize_t len;
+ 
+ 	device_lock(dev);
+-	len = snprintf(buf, PAGE_SIZE, "%s\n", pdev->driver_override);
++	len = sprintf(buf, "%s\n", pdev->driver_override);
+ 	device_unlock(dev);
+ 	return len;
+ }

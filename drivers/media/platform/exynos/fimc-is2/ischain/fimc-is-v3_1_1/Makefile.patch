@@ -1,0 +1,14 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/ischain/fimc-is-v3_1_1/Makefile b/drivers/media/platform/exynos/fimc-is2/ischain/fimc-is-v3_1_1/Makefile
+new file mode 100644
+index 000000000000..efa3f4c6e342
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/ischain/fimc-is-v3_1_1/Makefile
+@@ -0,0 +1,8 @@
++obj-$(CONFIG_FIMC_IS_V3_1_1) += fimc-is-hw-pwr.o
++obj-$(CONFIG_FIMC_IS_V3_1_1) += fimc-is-hw-chain.o
++ifeq ($(CONFIG_PM_DEVFREQ),y)
++obj-$(CONFIG_FIMC_IS_V3_1_1) += fimc-is-hw-dvfs.o
++endif
++
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2/include

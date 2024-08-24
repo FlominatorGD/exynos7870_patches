@@ -1,0 +1,24 @@
+diff --git a/drivers/motor/Kconfig b/drivers/motor/Kconfig
+new file mode 100755
+index 000000000000..ce292c9d1b82
+--- /dev/null
++++ b/drivers/motor/Kconfig
+@@ -0,0 +1,18 @@
++#
++#
++#
++config SEC_VIB
++	tristate "SEC DC Vibrator"
++	default n
++	depends on ANDROID_TIMED_OUTPUT
++	help
++		If you say yes here you will get support for the
++		SEC DC Vibrator.
++
++config ISA1000
++	tristate "IMAGIS ISA1000"
++	default n
++	depends on ANDROID_TIMED_OUTPUT
++	help
++		If you say yes here you will get support for the
++		haptic driver of IMAGIS ISA1000.

@@ -1,0 +1,16 @@
+diff --git a/fs/ext4/ioctl.c b/fs/ext4/ioctl.c
+index 811022a4af22..65911dd0477b 100644
+--- a/fs/ext4/ioctl.c
++++ b/fs/ext4/ioctl.c
+@@ -714,6 +714,11 @@ encryption_policy_out:
+ 		return -EOPNOTSUPP;
+ #endif
+ 	}
++	case FS_IOC_INVAL_MAPPING:
++	{
++		return invalidate_mapping_pages(inode->i_mapping, 0, -1);
++	}
++
+ 	default:
+ 		return -ENOTTY;
+ 	}

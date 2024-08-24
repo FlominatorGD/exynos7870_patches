@@ -1,0 +1,12 @@
+diff --git a/drivers/usb/core/hcd.c b/drivers/usb/core/hcd.c
+index 5e86aadf2903..1f0f7445a653 100644
+--- a/drivers/usb/core/hcd.c
++++ b/drivers/usb/core/hcd.c
+@@ -2911,7 +2911,6 @@ void usb_remove_hcd(struct usb_hcd *hcd)
+ 		if (hcd->irq > 0)
+ 			free_irq(hcd->irq, hcd);
+ 	}
+-
+ 	usb_deregister_bus(&hcd->self);
+ 	hcd_buffer_destroy(hcd);
+ 

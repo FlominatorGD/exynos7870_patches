@@ -1,0 +1,13 @@
+diff --git a/drivers/dma/imx-sdma.c b/drivers/dma/imx-sdma.c
+index c9e2b3b06a2f..a8a15a84f1af 100644
+--- a/drivers/dma/imx-sdma.c
++++ b/drivers/dma/imx-sdma.c
+@@ -1129,7 +1129,7 @@ err_out:
+ static struct dma_async_tx_descriptor *sdma_prep_dma_cyclic(
+ 		struct dma_chan *chan, dma_addr_t dma_addr, size_t buf_len,
+ 		size_t period_len, enum dma_transfer_direction direction,
+-		unsigned long flags)
++		unsigned long flags, void *context)
+ {
+ 	struct sdma_channel *sdmac = to_sdma_chan(chan);
+ 	struct sdma_engine *sdma = sdmac->sdma;

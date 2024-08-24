@@ -1,0 +1,10 @@
+diff --git a/README b/README
+index a24ec89ba442..26bd0f4d745e 100644
+--- a/README
++++ b/README
+@@ -1,4 +1,4 @@
+-        Linux kernel release 3.x <http://kernel.org/>
++         Linux kernel release 3.x <http://kernel.org/>
+ 
+ These are the release notes for Linux version 3.  Read them carefully,
+ as they tell you what this is all about, explain how to install the

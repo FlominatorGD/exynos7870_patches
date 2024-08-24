@@ -1,0 +1,8 @@
+diff --git a/scripts/android-version.sh b/scripts/android-version.sh
+new file mode 100644
+index 000000000000..c5b0051072d5
+--- /dev/null
++++ b/scripts/android-version.sh
+@@ -0,0 +1,2 @@
++#!/bin/sh
++echo $1 | awk -F. '{ printf "%d%02d%02d", $1, $2, $3 }'

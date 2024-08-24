@@ -1,0 +1,13 @@
+diff --git a/drivers/media/radio/rtc6213n/Makefile b/drivers/media/radio/rtc6213n/Makefile
+new file mode 100644
+index 000000000000..460e009c1389
+--- /dev/null
++++ b/drivers/media/radio/rtc6213n/Makefile
+@@ -0,0 +1,7 @@
++#
++# Makefile for radios with Richwave RTC6213N FM Tuner
++#
++
++radio-i2c-rtc6213n-objs	:= radio-rtc6213n-i2c.o radio-rtc6213n-common.o
++
++obj-$(CONFIG_I2C_RTC6213N) += radio-i2c-rtc6213n.o

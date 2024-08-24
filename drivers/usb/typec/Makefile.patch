@@ -1,0 +1,7 @@
+diff --git a/drivers/usb/typec/Makefile b/drivers/usb/typec/Makefile
+new file mode 100644
+index 000000000000..1012a8bed6d5
+--- /dev/null
++++ b/drivers/usb/typec/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_TYPEC)		+= typec.o

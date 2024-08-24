@@ -1,0 +1,11 @@
+diff --git a/drivers/iio/Kconfig b/drivers/iio/Kconfig
+index 345395e9dc6e..428ca98e53dd 100644
+--- a/drivers/iio/Kconfig
++++ b/drivers/iio/Kconfig
+@@ -77,5 +77,6 @@ endif #IIO_TRIGGER
+ source "drivers/iio/pressure/Kconfig"
+ source "drivers/iio/proximity/Kconfig"
+ source "drivers/iio/temperature/Kconfig"
++source "drivers/iio/inv_test/Kconfig"
+ 
+ endif # IIO

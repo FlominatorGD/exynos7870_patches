@@ -1,0 +1,21 @@
+diff --git a/include/linux/mailbox_client.h b/include/linux/mailbox_client.h
+index 307d9cab2026..1726ccbd8009 100644
+--- a/include/linux/mailbox_client.h
++++ b/include/linux/mailbox_client.h
+@@ -25,6 +25,8 @@ struct mbox_chan;
+  *			if the client receives some ACK packet for transmission.
+  *			Unused if the controller already has TX_Done/RTR IRQ.
+  * @rx_callback:	Atomic callback to provide client the data received
++ * @tx_prepare: 	Atomic callback to ask client to prepare the payload
++ *			before initiating the transmission if required.
+  * @tx_done:		Atomic callback to tell client of data transmission
+  */
+ struct mbox_client {
+@@ -34,6 +36,7 @@ struct mbox_client {
+ 	bool knows_txdone;
+ 
+ 	void (*rx_callback)(struct mbox_client *cl, void *mssg);
++	void (*tx_prepare)(struct mbox_client *cl, void *mssg);
+ 	void (*tx_done)(struct mbox_client *cl, void *mssg, int r);
+ };
+ 

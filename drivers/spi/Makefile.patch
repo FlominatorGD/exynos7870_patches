@@ -1,0 +1,12 @@
+diff --git a/drivers/spi/Makefile b/drivers/spi/Makefile
+index 78f24ca36fcf..8ceb4a741acd 100644
+--- a/drivers/spi/Makefile
++++ b/drivers/spi/Makefile
+@@ -3,6 +3,7 @@
+ #
+ 
+ ccflags-$(CONFIG_SPI_DEBUG) := -DDEBUG
++ccflags-y := $(KBUILD_FP_SENSOR_CFLAGS)
+ 
+ # small core, mostly translating board-specific
+ # config declarations into driver model code

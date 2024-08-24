@@ -1,0 +1,12 @@
+diff --git a/arch/arm64/kernel/cpuinfo.c b/arch/arm64/kernel/cpuinfo.c
+index 587a2ca93b9a..d87a7f5e1757 100644
+--- a/arch/arm64/kernel/cpuinfo.c
++++ b/arch/arm64/kernel/cpuinfo.c
+@@ -19,6 +19,7 @@
+ #include <asm/cpu.h>
+ #include <asm/cputype.h>
+ #include <asm/cpufeature.h>
++#include <asm/smp_plat.h>
+ 
+ #include <linux/bitops.h>
+ #include <linux/bug.h>

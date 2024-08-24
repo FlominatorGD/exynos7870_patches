@@ -1,0 +1,15 @@
+diff --git a/include/linux/power/bq24190_charger.h b/include/linux/power/bq24190_charger.h
+index 9f0283721cbc..194483d5f794 100644
+--- a/include/linux/power/bq24190_charger.h
++++ b/include/linux/power/bq24190_charger.h
+@@ -9,6 +9,10 @@
+ #ifndef _BQ24190_CHARGER_H_
+ #define _BQ24190_CHARGER_H_
+ 
++#if defined(CONFIG_FUELGAUGE_MAX17058_POWER) || defined(CONFIG_FUELGAUGE_S2MG001_POWER)
++#include <linux/power/sec_charging_common.h>
++#endif
++
+ struct bq24190_platform_data {
+ 	unsigned int	gpio_int;	/* GPIO pin that's connected to INT# */
+ };

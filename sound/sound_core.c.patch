@@ -1,0 +1,14 @@
+diff --git a/sound/sound_core.c b/sound/sound_core.c
+index 7ecc2249bfa9..11e953a1fa45 100644
+--- a/sound/sound_core.c
++++ b/sound/sound_core.c
+@@ -287,8 +287,7 @@ retry:
+ 				goto retry;
+ 			}
+ 			spin_unlock(&sound_loader_lock);
+-			r = -EBUSY;
+-			goto fail;
++			return -EBUSY;
+ 		}
+ 	}
+ 

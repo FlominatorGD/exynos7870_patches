@@ -1,0 +1,13 @@
+diff --git a/net/ax25/af_ax25.c b/net/ax25/af_ax25.c
+index 72baec30ab6d..993d60caddb7 100644
+--- a/net/ax25/af_ax25.c
++++ b/net/ax25/af_ax25.c
+@@ -862,8 +862,6 @@ static int ax25_create(struct net *net, struct socket *sock, int protocol,
+ 		break;
+ 
+ 	case SOCK_RAW:
+-		if (!capable(CAP_NET_RAW))
+-			return -EPERM;
+ 		break;
+ 	default:
+ 		return -ESOCKTNOSUPPORT;

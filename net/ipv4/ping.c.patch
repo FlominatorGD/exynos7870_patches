@@ -1,0 +1,13 @@
+diff --git a/net/ipv4/ping.c b/net/ipv4/ping.c
+index 4f5af189db00..e4392c644db1 100644
+--- a/net/ipv4/ping.c
++++ b/net/ipv4/ping.c
+@@ -659,7 +659,7 @@ int ping_common_sendmsg(int family, struct msghdr *msg, size_t len,
+ 			void *user_icmph, size_t icmph_len) {
+ 	u8 type, code;
+ 
+-	if (len > 0xFFFF)
++	if (len > 0xFFFF || len < icmph_len)
+ 		return -EMSGSIZE;
+ 
+ 	/* Must have at least a full ICMP header. */

@@ -1,0 +1,13 @@
+diff --git a/include/scsi/scsi_ioctl.h b/include/scsi/scsi_ioctl.h
+index b9006848b813..86394e3d1551 100644
+--- a/include/scsi/scsi_ioctl.h
++++ b/include/scsi/scsi_ioctl.h
+@@ -7,6 +7,8 @@
+ #define SCSI_IOCTL_SYNC 4			/* Request synchronous parameters */
+ #define SCSI_IOCTL_START_UNIT 5
+ #define SCSI_IOCTL_STOP_UNIT 6
++#define SCSI_IOCTL_SECURITY_PROTOCOL_IN	7
++#define SCSI_IOCTL_SECURITY_PROTOCOL_OUT 8
+ /* The door lock/unlock constants are compatible with Sun constants for
+    the cdrom */
+ #define SCSI_IOCTL_DOORLOCK 0x5380		/* lock the eject mechanism */

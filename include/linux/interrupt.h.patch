@@ -1,0 +1,12 @@
+diff --git a/include/linux/interrupt.h b/include/linux/interrupt.h
+index 69517a24bc50..4c8ac275b841 100644
+--- a/include/linux/interrupt.h
++++ b/include/linux/interrupt.h
+@@ -70,6 +70,7 @@
+ #define IRQF_FORCE_RESUME	0x00008000
+ #define IRQF_NO_THREAD		0x00010000
+ #define IRQF_EARLY_RESUME	0x00020000
++#define IRQF_GIC_MULTI_TARGET	0x10000000
+ 
+ #define IRQF_TIMER		(__IRQF_TIMER | IRQF_NO_SUSPEND | IRQF_NO_THREAD)
+ 

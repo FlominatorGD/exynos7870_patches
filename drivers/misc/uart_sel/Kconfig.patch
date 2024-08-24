@@ -1,0 +1,15 @@
+diff --git a/drivers/misc/uart_sel/Kconfig b/drivers/misc/uart_sel/Kconfig
+new file mode 100644
+index 000000000000..7aeed5e41225
+--- /dev/null
++++ b/drivers/misc/uart_sel/Kconfig
+@@ -0,0 +1,9 @@
++#
++# UART_SWITCH Device Driver
++#
++
++config UART_SEL
++     bool "UART SWITCH Support"
++     default n
++	 help
++	   This enables UART_SEL driver to control the UART_SEL Device.

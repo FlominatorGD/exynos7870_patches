@@ -1,0 +1,11 @@
+diff --git a/drivers/net/ethernet/broadcom/Makefile b/drivers/net/ethernet/broadcom/Makefile
+index e2a958a657e0..0e6250f8fa62 100644
+--- a/drivers/net/ethernet/broadcom/Makefile
++++ b/drivers/net/ethernet/broadcom/Makefile
+@@ -9,6 +9,5 @@ obj-$(CONFIG_BNX2) += bnx2.o
+ obj-$(CONFIG_CNIC) += cnic.o
+ obj-$(CONFIG_BNX2X) += bnx2x/
+ obj-$(CONFIG_SB1250_MAC) += sb1250-mac.o
+-obj-$(CONFIG_TIGON3) += tg3.o
+ obj-$(CONFIG_BGMAC) += bgmac.o
+ obj-$(CONFIG_SYSTEMPORT) += bcmsysport.o

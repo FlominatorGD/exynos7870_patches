@@ -1,0 +1,17 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/sensor/module_framework/flash/fimc-is-device-gpio.h b/drivers/media/platform/exynos/fimc-is2/sensor/module_framework/flash/fimc-is-device-gpio.h
+new file mode 100644
+index 000000000000..18d8a683d2da
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/sensor/module_framework/flash/fimc-is-device-gpio.h
+@@ -0,0 +1,11 @@
++/*
++ * Samsung Exynos5 SoC series Flash driver
++ *
++ *
++ * Copyright (c) 2014 Samsung Electronics Co., Ltd
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++ */
++

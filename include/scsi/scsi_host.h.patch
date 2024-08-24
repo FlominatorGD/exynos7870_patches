@@ -1,0 +1,15 @@
+diff --git a/include/scsi/scsi_host.h b/include/scsi/scsi_host.h
+index 5e362489ee88..ed89dfe9f52b 100644
+--- a/include/scsi/scsi_host.h
++++ b/include/scsi/scsi_host.h
+@@ -744,6 +744,10 @@ struct Scsi_Host {
+ 	 * Needed just in case we have virtual hosts.
+ 	 */
+ 	struct device *dma_dev;
++#ifdef CONFIG_USB_STORAGE_DETECT
++	unsigned int  by_usb;
++#endif
++	unsigned int  by_ufs;
+ 
+ 	/*
+ 	 * We should ensure that this is aligned, both for better performance

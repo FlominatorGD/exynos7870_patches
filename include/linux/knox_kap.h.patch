@@ -1,0 +1,22 @@
+diff --git a/include/linux/knox_kap.h b/include/linux/knox_kap.h
+new file mode 100644
+index 000000000000..fc59d7e9c5e8
+--- /dev/null
++++ b/include/linux/knox_kap.h
+@@ -0,0 +1,16 @@
++/*
++ * include/linux/knox_kap.h
++ *
++ * Include file for the KNOX KAP mode.
++ */
++
++#ifndef _LINUX_KNOX_KAP_H
++#define _LINUX_KNOX_KAP_H
++
++#include <linux/types.h>
++
++extern const struct file_operations knox_kap_fops;
++
++extern unsigned int knox_kap_status;
++
++#endif /* _LINUX_KNOX_KAP_H */

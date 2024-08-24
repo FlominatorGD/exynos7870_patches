@@ -1,0 +1,17 @@
+diff --git a/drivers/gud/Kconfig b/drivers/gud/Kconfig
+new file mode 100644
+index 000000000000..008c2f7e0927
+--- /dev/null
++++ b/drivers/gud/Kconfig
+@@ -0,0 +1,11 @@
++#
++# Mobicore Configuration
++#
++
++if SOC_EXYNOS8890
++source "drivers/gud/gud-exynos8890/Kconfig"
++endif
++
++if SOC_EXYNOS7870
++source "drivers/gud/gud-exynos7870/Kconfig"
++endif

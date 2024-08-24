@@ -1,0 +1,12 @@
+diff --git a/include/linux/regulator/fixed.h b/include/linux/regulator/fixed.h
+index 48918be649d4..ec83cf6d5dfc 100644
+--- a/include/linux/regulator/fixed.h
++++ b/include/linux/regulator/fixed.h
+@@ -51,6 +51,7 @@ struct fixed_voltage_config {
+ 	int microvolts;
+ 	int gpio;
+ 	unsigned startup_delay;
++	unsigned endup_delay;
+ 	unsigned gpio_is_open_drain:1;
+ 	unsigned enable_high:1;
+ 	unsigned enabled_at_boot:1;

@@ -1,0 +1,8 @@
+diff --git a/drivers/media/platform/exynos/mdev/Makefile b/drivers/media/platform/exynos/mdev/Makefile
+new file mode 100644
+index 000000000000..175a4bcdf939
+--- /dev/null
++++ b/drivers/media/platform/exynos/mdev/Makefile
+@@ -0,0 +1,2 @@
++mdev-objs := exynos-mdev.o
++obj-$(CONFIG_EXYNOS_MEDIA_DEVICE)	+= mdev.o

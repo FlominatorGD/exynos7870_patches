@@ -1,0 +1,7 @@
+diff --git a/drivers/input/touchscreen/synaptics_dsx/Makefile b/drivers/input/touchscreen/synaptics_dsx/Makefile
+new file mode 100644
+index 000000000000..c9ea560a535c
+--- /dev/null
++++ b/drivers/input/touchscreen/synaptics_dsx/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_DSX)	+= synaptics_i2c_rmi.o rmi_dev.o rmi_fw_update.o rmi_f54.o

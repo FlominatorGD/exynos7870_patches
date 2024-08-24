@@ -1,0 +1,18 @@
+diff --git a/drivers/pinctrl/Kconfig b/drivers/pinctrl/Kconfig
+index b916a0eb799f..c0e651538325 100644
+--- a/drivers/pinctrl/Kconfig
++++ b/drivers/pinctrl/Kconfig
+@@ -204,6 +204,13 @@ config PINCTRL_PALMAS
+ 	  open drain configuration for the Palmas series devices like
+ 	  TPS65913, TPS80036 etc.
+ 
++config SENSORS_FP_SPI_GPIO
++	depends on SENSORS_FINGERPRINT
++	string "Fingerprint spi gpio name"
++
++config MST_SECURE_GPIO
++	bool "setting MST gpio as secure pin"
++
+ source "drivers/pinctrl/berlin/Kconfig"
+ source "drivers/pinctrl/freescale/Kconfig"
+ source "drivers/pinctrl/mvebu/Kconfig"

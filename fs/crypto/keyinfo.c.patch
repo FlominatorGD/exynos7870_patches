@@ -1,0 +1,21 @@
+diff --git a/fs/crypto/keyinfo.c b/fs/crypto/keyinfo.c
+index 29b6d9dd7232..c0053e7c9c3f 100644
+--- a/fs/crypto/keyinfo.c
++++ b/fs/crypto/keyinfo.c
+@@ -185,6 +185,16 @@ static struct fscrypt_mode {
+ 		.cipher_str = "cts(cbc(aes))",
+ 		.keysize = 16,
+ 	},
++	[FS_ENCRYPTION_MODE_SPECK128_256_XTS] = {
++		.friendly_name = "Speck128/256-XTS",
++		.cipher_str = "xts(speck128)",
++		.keysize = 64,
++	},
++	[FS_ENCRYPTION_MODE_SPECK128_256_CTS] = {
++		.friendly_name = "Speck128/256-CTS-CBC",
++		.cipher_str = "cts(cbc(speck128))",
++		.keysize = 32,
++	},
+ };
+ 
+ static struct fscrypt_mode *

@@ -1,0 +1,11 @@
+diff --git a/drivers/char/Makefile b/drivers/char/Makefile
+index d06cde26031b..997f97c7f79b 100644
+--- a/drivers/char/Makefile
++++ b/drivers/char/Makefile
+@@ -62,3 +62,6 @@ js-rtc-y = rtc.o
+ 
+ obj-$(CONFIG_TILE_SROM)		+= tile-srom.o
+ obj-$(CONFIG_XILLYBUS)		+= xillybus/
++
++obj-$(CONFIG_KNOX_KAP)		+= knox_kap.o
++obj-$(CONFIG_MST_LDO)		+= mst_ctrl.o

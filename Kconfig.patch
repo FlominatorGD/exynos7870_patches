@@ -1,0 +1,17 @@
+diff --git a/Kconfig b/Kconfig
+index c13f48d65898..eebdb81670fe 100644
+--- a/Kconfig
++++ b/Kconfig
+@@ -8,4 +8,12 @@ config SRCARCH
+ 	string
+ 	option env="SRCARCH"
+ 
++config ANDROID_VERSION
++	string
++	option env="ANDROID_VERSION"
++
++config ANDROID_MAJOR_VERSION
++	string
++	option env="ANDROID_MAJOR_VERSION"
++
+ source "arch/$SRCARCH/Kconfig"

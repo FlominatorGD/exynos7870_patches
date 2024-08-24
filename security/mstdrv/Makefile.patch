@@ -1,0 +1,10 @@
+diff --git a/security/mstdrv/Makefile b/security/mstdrv/Makefile
+new file mode 100644
+index 000000000000..e9c8983fee37
+--- /dev/null
++++ b/security/mstdrv/Makefile
+@@ -0,0 +1,4 @@
++#
++# Makefile for MST drivers.
++#
++obj-$(CONFIG_MST_LDO)	+= mstdrv.o

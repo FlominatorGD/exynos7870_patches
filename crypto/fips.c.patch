@@ -1,0 +1,19 @@
+diff --git a/crypto/fips.c b/crypto/fips.c
+index 553970081c62..efc1cf4e9cd2 100644
+--- a/crypto/fips.c
++++ b/crypto/fips.c
+@@ -12,7 +12,14 @@
+ 
+ #include "internal.h"
+ 
++// change@wtl.kSingh - In FIPS mode always enable this flag - starts
++#ifdef CONFIG_CRYPTO_FIPS
++int fips_enabled = 1;
++#else
+ int fips_enabled;
++#endif
++// change@wtl.kSingh - In FIPS mode always enable this flag - ends
++
+ EXPORT_SYMBOL_GPL(fips_enabled);
+ 
+ /* Process kernel command-line parameter at boot time. fips=0 or fips=1 */

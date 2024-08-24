@@ -1,0 +1,13 @@
+diff --git a/include/net/flow.h b/include/net/flow.h
+index 546f6d6dcb84..935c6e8673dd 100644
+--- a/include/net/flow.h
++++ b/include/net/flow.h
+@@ -89,7 +89,7 @@ static inline void flowi4_init_output(struct flowi4 *fl4, int oif,
+ 				      __u8 proto, __u8 flags,
+ 				      __be32 daddr, __be32 saddr,
+ 				      __be16 dport, __be16 sport,
+-				      kuid_t uid)
++					  kuid_t uid)
+ {
+ 	fl4->flowi4_oif = oif;
+ 	fl4->flowi4_iif = LOOPBACK_IFINDEX;

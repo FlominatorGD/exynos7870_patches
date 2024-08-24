@@ -1,0 +1,13 @@
+diff --git a/fs/nfs/nfs4file.c b/fs/nfs/nfs4file.c
+index bb649a09b573..953be099775f 100644
+--- a/fs/nfs/nfs4file.c
++++ b/fs/nfs/nfs4file.c
+@@ -38,7 +38,7 @@ nfs4_file_open(struct inode *inode, struct file *filp)
+ 	dprintk("NFS: open file(%pd2)\n", dentry);
+ 
+ 	if ((openflags & O_ACCMODE) == 3)
+-		return nfs_open(inode, filp);
++		openflags--;
+ 
+ 	/* We can't create new files here */
+ 	openflags &= ~(O_CREAT|O_EXCL);

@@ -1,0 +1,15 @@
+diff --git a/drivers/muic/universal/muic_i2c.h b/drivers/muic/universal/muic_i2c.h
+new file mode 100644
+index 000000000000..2183bc46e067
+--- /dev/null
++++ b/drivers/muic/universal/muic_i2c.h
+@@ -0,0 +1,9 @@
++#ifndef _MUIC_I2C_
++#define _MUIC_I2C_
++
++extern int muic_i2c_read_byte(const struct i2c_client *client, u8 command);
++extern int muic_i2c_write_byte(const struct i2c_client *client,
++			u8 command, u8 value);
++extern int muic_i2c_guaranteed_wbyte(const struct i2c_client *client,
++			u8 command, u8 value);
++#endif

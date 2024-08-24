@@ -1,0 +1,13 @@
+diff --git a/arch/arm64/kernel/irq.c b/arch/arm64/kernel/irq.c
+index de99d4bd31bb..808da2c3b026 100644
+--- a/arch/arm64/kernel/irq.c
++++ b/arch/arm64/kernel/irq.c
+@@ -73,6 +73,8 @@ static bool migrate_one_irq(struct irq_desc *desc)
+ 	if (cpumask_any_and(affinity, cpu_online_mask) >= nr_cpu_ids) {
+ 		affinity = cpu_online_mask;
+ 		ret = true;
++	} else if (unlikely(d->state_use_accessors & IRQD_GIC_MULTI_TARGET)) {
++		return false;
+ 	}
+ 
+ 	c = irq_data_get_irq_chip(d);

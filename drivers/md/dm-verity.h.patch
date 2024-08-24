@@ -1,0 +1,14 @@
+diff --git a/drivers/md/dm-verity.h b/drivers/md/dm-verity.h
+index 79f992bae754..65cd7201ae15 100644
+--- a/drivers/md/dm-verity.h
++++ b/drivers/md/dm-verity.h
+@@ -65,6 +65,9 @@ struct dm_verity {
+ 
+ 	struct dm_verity_fec *fec;	/* forward error correction */
+ 	unsigned long *validated_blocks; /* bitset blocks validated */
++#ifdef DMV_ALTA
++	u8 *verity_bitmap; /* bitmap for skipping verification on blocks */
++#endif
+ };
+ 
+ struct dm_verity_io {

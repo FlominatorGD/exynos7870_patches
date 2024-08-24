@@ -1,0 +1,13 @@
+diff --git a/net/sctp/protocol.c b/net/sctp/protocol.c
+index 83f89ba0c7e6..0c7b42a5ad44 100644
+--- a/net/sctp/protocol.c
++++ b/net/sctp/protocol.c
+@@ -1325,7 +1325,7 @@ static int __net_init sctp_ctrlsock_init(struct net *net)
+ 	return status;
+ }
+ 
+-static void __net_exit sctp_ctrlsock_exit(struct net *net)
++static void __net_init sctp_ctrlsock_exit(struct net *net)
+ {
+ 	/* Free the control endpoint.  */
+ 	inet_ctl_sock_destroy(net->sctp.ctl_sock);

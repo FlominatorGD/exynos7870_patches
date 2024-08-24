@@ -1,0 +1,9 @@
+diff --git a/drivers/staging/sti/Makefile b/drivers/staging/sti/Makefile
+new file mode 100644
+index 000000000000..43dab5a60daf
+--- /dev/null
++++ b/drivers/staging/sti/Makefile
+@@ -0,0 +1,3 @@
++# Makefile for sti directory
++
++obj-$(CONFIG_SEC_ABC)		+= abc/

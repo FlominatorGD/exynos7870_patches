@@ -1,0 +1,7 @@
+diff --git a/security/samsung/defex_lsm/build_defex_log b/security/samsung/defex_lsm/build_defex_log
+new file mode 100644
+index 000000000000..e2683371e50c
+--- /dev/null
++++ b/security/samsung/defex_lsm/build_defex_log
+@@ -0,0 +1 @@
++enable_build_whitelist

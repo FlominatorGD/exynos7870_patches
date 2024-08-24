@@ -1,0 +1,15 @@
+diff --git a/net/core/iovec.c b/net/core/iovec.c
+index e1ec45ab1e63..4c3fd5845f4b 100644
+--- a/net/core/iovec.c
++++ b/net/core/iovec.c
+@@ -88,6 +88,10 @@ int csum_partial_copy_fromiovecend(unsigned char *kdata, struct iovec *iov,
+ 	__wsum csum = *csump;
+ 	int partial_cnt = 0, err = 0;
+ 
++	/* No data? Done! */
++	if (len == 0)
++		return 0;
++
+ 	/* Skip over the finished iovecs */
+ 	while (offset >= iov->iov_len) {
+ 		offset -= iov->iov_len;

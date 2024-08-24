@@ -1,0 +1,27 @@
+diff --git a/drivers/gpu/arm/t8xx/r7p0/platform/Kbuild b/drivers/gpu/arm/t8xx/r7p0/platform/Kbuild
+new file mode 100644
+index 000000000000..283c88492776
+--- /dev/null
++++ b/drivers/gpu/arm/t8xx/r7p0/platform/Kbuild
+@@ -0,0 +1,21 @@
++#
++# (C) COPYRIGHT 2012 ARM Limited. All rights reserved.
++#
++# This program is free software and is provided to you under the terms of the
++# GNU General Public License version 2 as published by the Free Software
++# Foundation, and any use by you of this program is subject to the terms
++# of such GNU licence.
++#
++# A copy of the licence is included with the program, and can also be obtained
++# from Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
++# Boston, MA  02110-1301, USA.
++#
++#
++
++
++
++ifeq ($(CONFIG_MALI_PLATFORM_THIRDPARTY),y)
++# remove begin and end quotes from the Kconfig string type
++	platform_name := $(shell echo $(CONFIG_MALI_PLATFORM_THIRDPARTY_NAME))
++	obj-y += exynos/
++endif

@@ -1,0 +1,7 @@
+diff --git a/drivers/input/touchscreen/mxt_t/Makefile b/drivers/input/touchscreen/mxt_t/Makefile
+new file mode 100644
+index 000000000000..d26d02e2e454
+--- /dev/null
++++ b/drivers/input/touchscreen/mxt_t/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_TOUCHSCREEN_ATMEL_MXT1664)	+= mxtt.o

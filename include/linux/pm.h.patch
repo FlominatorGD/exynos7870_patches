@@ -1,0 +1,12 @@
+diff --git a/include/linux/pm.h b/include/linux/pm.h
+index 383fd68aaee1..3781d8ccb7d9 100644
+--- a/include/linux/pm.h
++++ b/include/linux/pm.h
+@@ -773,6 +773,7 @@ enum dpm_order {
+ 	DPM_ORDER_DEV_AFTER_PARENT,
+ 	DPM_ORDER_PARENT_BEFORE_DEV,
+ 	DPM_ORDER_DEV_LAST,
++	DPM_ORDER_DEV_FIRST,
+ };
+ 
+ #endif /* _LINUX_PM_H */

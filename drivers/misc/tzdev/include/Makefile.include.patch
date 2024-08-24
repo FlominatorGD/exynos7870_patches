@@ -1,0 +1,7 @@
+diff --git a/drivers/misc/tzdev/include/Makefile.include b/drivers/misc/tzdev/include/Makefile.include
+new file mode 100644
+index 000000000000..ded820d6db5f
+--- /dev/null
++++ b/drivers/misc/tzdev/include/Makefile.include
+@@ -0,0 +1 @@
++ccflags-$(CONFIG_TZDEV) += -I$(srctree)/drivers/misc/tzdev/include

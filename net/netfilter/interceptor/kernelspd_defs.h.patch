@@ -1,0 +1,13 @@
+diff --git a/net/netfilter/interceptor/kernelspd_defs.h b/net/netfilter/interceptor/kernelspd_defs.h
+new file mode 100644
+index 000000000000..93cab33bf83a
+--- /dev/null
++++ b/net/netfilter/interceptor/kernelspd_defs.h
+@@ -0,0 +1,7 @@
++/**
++   @copyright
++   Copyright (c) 2013, INSIDE Secure Oy. All rights reserved.
++*/
++
++#include <linux/string.h>
++#include <linux/kernel.h>

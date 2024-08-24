@@ -1,0 +1,13 @@
+diff --git a/kernel/Kconfig.freezer b/kernel/Kconfig.freezer
+index a3bb4cb52539..99d7cb13799a 100644
+--- a/kernel/Kconfig.freezer
++++ b/kernel/Kconfig.freezer
+@@ -1,2 +1,7 @@
+ config FREEZER
+ 	def_bool PM_SLEEP || CGROUP_FREEZER
++config OLAF_SUPPORT
++	bool "thaw frozen process when recieve sig"
++	default n
++	help
++		thaw frozen process when recieve sig. enable if samsung olaf solution exist
+\ No newline at end of file

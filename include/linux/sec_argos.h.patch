@@ -1,0 +1,15 @@
+diff --git a/include/linux/sec_argos.h b/include/linux/sec_argos.h
+new file mode 100644
+index 000000000000..9fdf36dfa934
+--- /dev/null
++++ b/include/linux/sec_argos.h
+@@ -0,0 +1,9 @@
++#ifndef _SEC_ARGOS_H
++#define _SEC_ARGOS_H
++
++extern int irq_set_affinity(unsigned int irq, const struct cpumask *mask);
++
++extern int sec_argos_register_notifier(struct notifier_block *n, char *label);
++extern int sec_argos_unregister_notifier(struct notifier_block *n, char *label);
++
++#endif

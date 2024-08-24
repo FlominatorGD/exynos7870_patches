@@ -1,0 +1,12 @@
+diff --git a/drivers/clocksource/Kconfig b/drivers/clocksource/Kconfig
+index 2a6b2a8e1578..09f3b434a8f4 100644
+--- a/drivers/clocksource/Kconfig
++++ b/drivers/clocksource/Kconfig
+@@ -142,7 +142,6 @@ config CLKSRC_METAG_GENERIC
+ 
+ config CLKSRC_EXYNOS_MCT
+ 	def_bool y if ARCH_EXYNOS
+-	depends on !ARM64
+ 	help
+ 	  Support for Multi Core Timer controller on Exynos SoCs.
+ 

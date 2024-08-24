@@ -1,0 +1,8 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/vendor/Makefile b/drivers/media/platform/exynos/fimc-is2/vendor/Makefile
+new file mode 100644
+index 000000000000..cc743a930a65
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/vendor/Makefile
+@@ -0,0 +1,2 @@
++obj-$(CONFIG_VENDER_DEFAULT) += default/
++obj-$(CONFIG_VENDER_MCD) += mcd/

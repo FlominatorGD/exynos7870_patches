@@ -1,0 +1,12 @@
+diff --git a/include/linux/vmpressure.h b/include/linux/vmpressure.h
+index 3e4535876d37..645e5a039af6 100644
+--- a/include/linux/vmpressure.h
++++ b/include/linux/vmpressure.h
+@@ -12,6 +12,7 @@
+ struct vmpressure {
+ 	unsigned long scanned;
+ 	unsigned long reclaimed;
++	unsigned long pressure;
+ 	/* The lock is used to keep the scanned/reclaimed above in sync. */
+ 	struct spinlock sr_lock;
+ 

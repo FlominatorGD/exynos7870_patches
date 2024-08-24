@@ -1,0 +1,7 @@
+diff --git a/arch/parisc/kernel/.gitignore b/arch/parisc/kernel/.gitignore
+deleted file mode 100644
+index c5f676c3c224..000000000000
+--- a/arch/parisc/kernel/.gitignore
++++ /dev/null
+@@ -1 +0,0 @@
+-vmlinux.lds

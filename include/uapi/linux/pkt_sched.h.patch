@@ -1,0 +1,12 @@
+diff --git a/include/uapi/linux/pkt_sched.h b/include/uapi/linux/pkt_sched.h
+index d62316baae94..08b115fa9afb 100644
+--- a/include/uapi/linux/pkt_sched.h
++++ b/include/uapi/linux/pkt_sched.h
+@@ -126,6 +126,7 @@ struct tc_fifo_qopt {
+ struct tc_prio_qopt {
+ 	int	bands;			/* Number of bands */
+ 	__u8	priomap[TC_PRIO_MAX+1];	/* Map: logical priority -> PRIO band */
++	__u8	enable_flow;		/* Enable dequeue */
+ };
+ 
+ /* MULTIQ section */

@@ -1,0 +1,13 @@
+diff --git a/drivers/video/Kconfig b/drivers/video/Kconfig
+index 49fcbb1632af..1daa05544ed9 100644
+--- a/drivers/video/Kconfig
++++ b/drivers/video/Kconfig
+@@ -17,6 +17,8 @@ config SH_LCD_MIPI_DSI
+ 
+ source "drivers/char/agp/Kconfig"
+ 
++source "drivers/gpu/arm/Kconfig"
++
+ source "drivers/gpu/vga/Kconfig"
+ 
+ source "drivers/gpu/host1x/Kconfig"

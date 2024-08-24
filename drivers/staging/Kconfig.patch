@@ -1,0 +1,15 @@
+diff --git a/drivers/staging/Kconfig b/drivers/staging/Kconfig
+index 4690ae9a267f..f14a90bf759c 100644
+--- a/drivers/staging/Kconfig
++++ b/drivers/staging/Kconfig
+@@ -108,4 +108,10 @@ source "drivers/staging/skein/Kconfig"
+ 
+ source "drivers/staging/unisys/Kconfig"
+ 
++source "drivers/staging/samsung/Kconfig"
++
++source "drivers/staging/vnswap/Kconfig"
++
++source "drivers/staging/sti/Kconfig"
++
+ endif # STAGING

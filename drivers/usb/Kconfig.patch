@@ -1,0 +1,24 @@
+diff --git a/drivers/usb/Kconfig b/drivers/usb/Kconfig
+index ae481c37a208..9331d0372db6 100644
+--- a/drivers/usb/Kconfig
++++ b/drivers/usb/Kconfig
+@@ -98,6 +98,10 @@ endif
+ 
+ source "drivers/usb/musb/Kconfig"
+ 
++source "drivers/usb/notify/Kconfig"
++
++source "drivers/usb/manager/Kconfig"
++
+ source "drivers/usb/dwc3/Kconfig"
+ 
+ source "drivers/usb/dwc2/Kconfig"
+@@ -149,6 +153,8 @@ source "drivers/usb/phy/Kconfig"
+ 
+ source "drivers/usb/gadget/Kconfig"
+ 
++source "drivers/usb/typec/Kconfig"
++
+ config USB_LED_TRIG
+ 	bool "USB LED Triggers"
+ 	depends on LEDS_CLASS && USB_COMMON && LEDS_TRIGGERS

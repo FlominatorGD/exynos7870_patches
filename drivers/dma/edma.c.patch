@@ -1,0 +1,13 @@
+diff --git a/drivers/dma/edma.c b/drivers/dma/edma.c
+index abff66c18432..28605100e751 100644
+--- a/drivers/dma/edma.c
++++ b/drivers/dma/edma.c
+@@ -605,7 +605,7 @@ struct dma_async_tx_descriptor *edma_prep_dma_memcpy(
+ static struct dma_async_tx_descriptor *edma_prep_dma_cyclic(
+ 	struct dma_chan *chan, dma_addr_t buf_addr, size_t buf_len,
+ 	size_t period_len, enum dma_transfer_direction direction,
+-	unsigned long tx_flags)
++	unsigned long tx_flags, void *context)
+ {
+ 	struct edma_chan *echan = to_edma_chan(chan);
+ 	struct device *dev = chan->device->dev;

@@ -1,0 +1,13 @@
+diff --git a/drivers/ifpmic/manager/Makefile b/drivers/ifpmic/manager/Makefile
+new file mode 100755
+index 000000000000..1a69b12a0ce1
+--- /dev/null
++++ b/drivers/ifpmic/manager/Makefile
+@@ -0,0 +1,7 @@
++#
++# Makefile for usb typec manager drivers
++#
++
++obj-$(CONFIG_USB_TYPEC_MANAGER_NOTIFIER)     += usb_typec_manager_notifier.o
++#obj-$(CONFIG_USB_TYPEC_MANAGER)     += usb_typec_manager.o
++

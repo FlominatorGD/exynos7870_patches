@@ -1,0 +1,22 @@
+diff --git a/drivers/memory/Kconfig b/drivers/memory/Kconfig
+index 6d91c27fd4c8..907c30ea2ebb 100644
+--- a/drivers/memory/Kconfig
++++ b/drivers/memory/Kconfig
+@@ -4,9 +4,17 @@
+ 
+ menuconfig MEMORY
+ 	bool "Memory Controller drivers"
++	default y
+ 
+ if MEMORY
+ 
++config EXYNOS_MCOMP
++	bool "Exynos memory compressor"
++	default y
++	depends on ARCH_EXYNOS
++	help
++	  Memory compressor
++
+ config ATMEL_SDRAMC
+ 	bool "Atmel (Multi-port DDR-)SDRAM Controller"
+ 	default y

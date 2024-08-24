@@ -1,0 +1,11 @@
+diff --git a/drivers/soc/Kconfig b/drivers/soc/Kconfig
+index 76d6bd4da138..90f33b9ce7b5 100644
+--- a/drivers/soc/Kconfig
++++ b/drivers/soc/Kconfig
+@@ -3,5 +3,6 @@ menu "SOC (System On Chip) specific Drivers"
+ source "drivers/soc/qcom/Kconfig"
+ source "drivers/soc/ti/Kconfig"
+ source "drivers/soc/versatile/Kconfig"
++source "drivers/soc/samsung/Kconfig"
+ 
+ endmenu

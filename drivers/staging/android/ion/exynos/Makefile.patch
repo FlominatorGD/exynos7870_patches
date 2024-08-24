@@ -1,0 +1,7 @@
+diff --git a/drivers/staging/android/ion/exynos/Makefile b/drivers/staging/android/ion/exynos/Makefile
+new file mode 100644
+index 000000000000..b5cd9e758fc9
+--- /dev/null
++++ b/drivers/staging/android/ion/exynos/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_ION_EXYNOS) += exynos_ion.o

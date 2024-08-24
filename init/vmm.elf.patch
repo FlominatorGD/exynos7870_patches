@@ -1,0 +1,4 @@
+diff --git a/init/vmm.elf b/init/vmm.elf
+new file mode 100755
+index 000000000000..8a0ef2bedc65
+Binary files /dev/null and b/init/vmm.elf differ

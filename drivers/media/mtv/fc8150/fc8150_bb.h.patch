@@ -1,0 +1,29 @@
+diff --git a/drivers/media/mtv/fc8150/fc8150_bb.h b/drivers/media/mtv/fc8150/fc8150_bb.h
+new file mode 100755
+index 000000000000..487aba19c64d
+--- /dev/null
++++ b/drivers/media/mtv/fc8150/fc8150_bb.h
+@@ -0,0 +1,23 @@
++/*****************************************************************************
++ Copyright(c) 2012 FCI Inc. All Rights Reserved
++
++ File name : fc8150_bb.h
++
++ Description : API of 1-SEG baseband module
++
++*******************************************************************************/
++
++
++#ifndef __FC8150_BB__
++#define __FC8150_BB__
++
++#include "fci_types.h"
++
++extern int fc8150_reset(HANDLE hDevice);
++extern int fc8150_probe(HANDLE hDevice);
++extern int fc8150_init(HANDLE hDevice);
++extern int fc8150_deinit(HANDLE hDevice);
++extern int fc8150_scan_status(HANDLE hDevice);
++
++#endif
++

@@ -1,0 +1,12 @@
+diff --git a/drivers/media/platform/exynos/smfc/Makefile b/drivers/media/platform/exynos/smfc/Makefile
+new file mode 100644
+index 000000000000..29807416ea05
+--- /dev/null
++++ b/drivers/media/platform/exynos/smfc/Makefile
+@@ -0,0 +1,6 @@
++#
++# Copyright (c) 2015 Samsung Electronics Co., Ltd.
++#		http://www.samsung.com
++#
++
++obj-$(CONFIG_VIDEO_EXYNOS_SMFC) += smfc.o smfc-v4l2-ioctls.o smfc-regs.o smfc-stream-parser.o

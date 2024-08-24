@@ -1,0 +1,22 @@
+diff --git a/include/linux/thermal.h b/include/linux/thermal.h
+index 96c305167a1e..0432ef3eef81 100644
+--- a/include/linux/thermal.h
++++ b/include/linux/thermal.h
+@@ -139,6 +139,7 @@ struct thermal_zone_device_ops {
+ 			  enum thermal_trend *);
+ 	int (*notify) (struct thermal_zone_device *, int,
+ 		       enum thermal_trip_type);
++	int (*throttle_cpu_hotplug) (struct thermal_zone_device *);
+ };
+ 
+ struct thermal_cooling_device_ops {
+@@ -229,6 +230,9 @@ struct thermal_zone_device {
+ 	struct mutex lock;
+ 	struct list_head node;
+ 	struct delayed_work poll_queue;
++#ifdef CONFIG_SCHED_MC
++	unsigned int poll_queue_cpu;
++#endif
+ };
+ 
+ /**

@@ -1,0 +1,19 @@
+diff --git a/security/Kconfig b/security/Kconfig
+index 601882ce946a..a81ec32facbc 100644
+--- a/security/Kconfig
++++ b/security/Kconfig
+@@ -171,8 +171,13 @@ source security/smack/Kconfig
+ source security/tomoyo/Kconfig
+ source security/apparmor/Kconfig
+ source security/yama/Kconfig
+-
++source security/mstdrv/Kconfig
+ source security/integrity/Kconfig
++source security/tz_iccc/Kconfig
++source security/samsung/five/Kconfig
++source security/samsung/defex_lsm/Kconfig
++source security/proca/Kconfig
++source security/samsung/dsms/Kconfig
+ 
+ choice
+ 	prompt "Default security module"

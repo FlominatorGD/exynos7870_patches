@@ -1,0 +1,13 @@
+diff --git a/include/uapi/linux/usb/ch9.h b/include/uapi/linux/usb/ch9.h
+index 8225951ee1b3..476ee2b85394 100644
+--- a/include/uapi/linux/usb/ch9.h
++++ b/include/uapi/linux/usb/ch9.h
+@@ -705,7 +705,7 @@ struct usb_interface_assoc_descriptor {
+ 	__u8  iFunction;
+ } __attribute__ ((packed));
+ 
+-#define USB_DT_INTERFACE_ASSOCIATION_SIZE	8
++#define USB_DT_INTERFACE_ASSOCIATION_SIZE   8
+ 
+ /*-------------------------------------------------------------------------*/
+ 

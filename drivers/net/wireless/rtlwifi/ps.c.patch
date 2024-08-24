@@ -1,0 +1,24 @@
+diff --git a/drivers/net/wireless/rtlwifi/ps.c b/drivers/net/wireless/rtlwifi/ps.c
+index 7bafe593bc91..b69321d45f04 100644
+--- a/drivers/net/wireless/rtlwifi/ps.c
++++ b/drivers/net/wireless/rtlwifi/ps.c
+@@ -761,9 +761,6 @@ static void rtl_p2p_noa_ie(struct ieee80211_hw *hw, void *data,
+ 				return;
+ 			} else {
+ 				noa_num = (noa_len - 2) / 13;
+-				if (noa_num > P2P_MAX_NOA_NUM)
+-					noa_num = P2P_MAX_NOA_NUM;
+-
+ 			}
+ 			noa_index = ie[3];
+ 			if (rtlpriv->psc.p2p_ps_info.p2p_ps_mode ==
+@@ -858,9 +855,6 @@ static void rtl_p2p_action_ie(struct ieee80211_hw *hw, void *data,
+ 				return;
+ 			} else {
+ 				noa_num = (noa_len - 2) / 13;
+-				if (noa_num > P2P_MAX_NOA_NUM)
+-					noa_num = P2P_MAX_NOA_NUM;
+-
+ 			}
+ 			noa_index = ie[3];
+ 			if (rtlpriv->psc.p2p_ps_info.p2p_ps_mode ==

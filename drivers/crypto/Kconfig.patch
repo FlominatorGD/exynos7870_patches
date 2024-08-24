@@ -1,0 +1,11 @@
+diff --git a/drivers/crypto/Kconfig b/drivers/crypto/Kconfig
+index 2fb0fdfc87df..2ec10cc4e760 100644
+--- a/drivers/crypto/Kconfig
++++ b/drivers/crypto/Kconfig
+@@ -436,4 +436,6 @@ config CRYPTO_DEV_QCE
+ 	  hardware. To compile this driver as a module, choose M here. The
+ 	  module will be called qcrypto.
+ 
++source "drivers/crypto/fmp/Kconfig"
++
+ endif # CRYPTO_HW

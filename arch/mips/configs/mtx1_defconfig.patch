@@ -1,0 +1,12 @@
+diff --git a/arch/mips/configs/mtx1_defconfig b/arch/mips/configs/mtx1_defconfig
+index 6ac662afd5c1..9b6926d6bb32 100644
+--- a/arch/mips/configs/mtx1_defconfig
++++ b/arch/mips/configs/mtx1_defconfig
+@@ -638,6 +638,7 @@ CONFIG_USB_SERIAL_OMNINET=m
+ CONFIG_USB_EMI62=m
+ CONFIG_USB_EMI26=m
+ CONFIG_USB_ADUTUX=m
++CONFIG_USB_RIO500=m
+ CONFIG_USB_LEGOTOWER=m
+ CONFIG_USB_LCD=m
+ CONFIG_USB_LED=m

@@ -1,0 +1,12 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/sensor/module_framework/dphy/Makefile b/drivers/media/platform/exynos/fimc-is2/sensor/module_framework/dphy/Makefile
+new file mode 100644
+index 000000000000..56045f8c1131
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/sensor/module_framework/dphy/Makefile
+@@ -0,0 +1,6 @@
++obj-$(CONFIG_CAMERA_FPGA_DPHY) += fimc-is-fpga-dphy.o
++
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2/include
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2/vendor
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2/sensor

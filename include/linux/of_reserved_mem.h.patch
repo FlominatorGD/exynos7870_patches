@@ -1,0 +1,12 @@
+diff --git a/include/linux/of_reserved_mem.h b/include/linux/of_reserved_mem.h
+index ad2f67054372..fd69c145f2a3 100644
+--- a/include/linux/of_reserved_mem.h
++++ b/include/linux/of_reserved_mem.h
+@@ -13,6 +13,7 @@ struct reserved_mem {
+ 	phys_addr_t			base;
+ 	phys_addr_t			size;
+ 	void				*priv;
++	bool				reusable;
+ };
+ 
+ struct reserved_mem_ops {

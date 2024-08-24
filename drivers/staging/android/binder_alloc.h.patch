@@ -1,0 +1,14 @@
+diff --git a/drivers/staging/android/binder_alloc.h b/drivers/staging/android/binder_alloc.h
+index 8ce2cb246798..e8a2177b97a3 100644
+--- a/drivers/staging/android/binder_alloc.h
++++ b/drivers/staging/android/binder_alloc.h
+@@ -24,6 +24,9 @@
+ #include <linux/list_lru.h>
+ 
+ extern struct list_lru binder_alloc_lru;
++
++#define BINDER_MIN_ALLOC (1 * PAGE_SIZE)
++
+ struct binder_transaction;
+ 
+ /**

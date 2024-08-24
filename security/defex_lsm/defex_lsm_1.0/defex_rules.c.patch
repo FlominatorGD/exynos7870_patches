@@ -1,0 +1,33 @@
+diff --git a/security/defex_lsm/defex_lsm_1.0/defex_rules.c b/security/defex_lsm/defex_lsm_1.0/defex_rules.c
+new file mode 100755
+index 000000000000..3610115a5f0f
+--- /dev/null
++++ b/security/defex_lsm/defex_lsm_1.0/defex_rules.c
+@@ -0,0 +1,27 @@
++/*
++ * Copyright (c) 2018 Samsung Electronics Co., Ltd. All Rights Reserved
++ *
++ * This program is free software; you can redistribute it and/or modify it
++ * under the terms of the GNU General Public License version 2
++ * as published by the Free Software Foundation.
++ */
++
++#include "include/defex_rules.h"
++
++const struct static_rule defex_static_rules[] = {
++	{feature_ped_path,"/"},
++#ifndef DEFEX_USE_PACKED_RULES
++	{feature_ped_exception,"/system/bin/run-as"},
++	{feature_safeplace_path,"/init"},
++	{feature_safeplace_path,"/sbin/"},
++	{feature_safeplace_path,"/system/bin/"},
++	{feature_safeplace_path,"/system/xbin/"},
++	{feature_safeplace_path,"/system/vendor/bin/"},
++	{feature_safeplace_path,"/vendor/bin/"},
++	{feature_safeplace_path,"/tmp/update_binary"},
++#endif /* DEFEX_USE_PACKED_RULES */
++	{feature_safeplace_status,"1"},
++	{feature_ped_status,"1"},
++};
++
++const int static_rule_count = sizeof(defex_static_rules) / sizeof(defex_static_rules[0]);

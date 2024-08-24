@@ -1,0 +1,16 @@
+diff --git a/security/tima_uevent/Makefile b/security/tima_uevent/Makefile
+new file mode 100644
+index 000000000000..1203a3396ea0
+--- /dev/null
++++ b/security/tima_uevent/Makefile
+@@ -0,0 +1,9 @@
++#
++
++# Makefile for TIMA kernel uevent drivers.
++
++#
++
++
++
++#obj-$(CONFIG_TIMA)   += tima_uevent.o
+\ No newline at end of file

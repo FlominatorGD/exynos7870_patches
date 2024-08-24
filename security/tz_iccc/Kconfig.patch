@@ -1,0 +1,16 @@
+diff --git a/security/tz_iccc/Kconfig b/security/tz_iccc/Kconfig
+new file mode 100644
+index 000000000000..623a5ceb6875
+--- /dev/null
++++ b/security/tz_iccc/Kconfig
+@@ -0,0 +1,9 @@
++#
++# TZ iccc configuration
++#
++config TZ_ICCC
++	bool "TZ ICCC"
++	depends on TIMA && !SEC_FACTORY
++	default n
++	---help---
++	Provide kernel api for reading and writing ICCC secure parameters.
+\ No newline at end of file

@@ -1,0 +1,15 @@
+diff --git a/drivers/xen/events/events_base.c b/drivers/xen/events/events_base.c
+index da6f2b6b726c..17bfb7d63117 100644
+--- a/drivers/xen/events/events_base.c
++++ b/drivers/xen/events/events_base.c
+@@ -547,6 +547,10 @@ static unsigned int __startup_pirq(unsigned int irq)
+ 	if (rc)
+ 		goto err;
+ 
++	rc = xen_evtchn_port_setup(info);
++	if (rc)
++		goto err;
++
+ out:
+ 	unmask_evtchn(evtchn);
+ 	eoi_pirq(irq_get_irq_data(irq));

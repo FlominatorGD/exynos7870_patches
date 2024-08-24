@@ -1,0 +1,13 @@
+diff --git a/kernel/cgroup.c b/kernel/cgroup.c
+index 8c3d99768f34..9b3b470300c6 100644
+--- a/kernel/cgroup.c
++++ b/kernel/cgroup.c
+@@ -5466,7 +5466,7 @@ static int cgroup_css_links_read(struct seq_file *seq, void *v)
+ 		struct task_struct *task;
+ 		int count = 0;
+ 
+-		seq_printf(seq, "css_set %p\n", cset);
++		seq_printf(seq, "css_set %pK\n", cset);
+ 
+ 		list_for_each_entry(task, &cset->tasks, cg_list) {
+ 			if (count++ > MAX_TASKS_SHOWN_PER_CSS)

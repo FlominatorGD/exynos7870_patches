@@ -1,0 +1,13 @@
+diff --git a/net/ipv6/netfilter/ip6_tables.c b/net/ipv6/netfilter/ip6_tables.c
+index 02f50cfc5592..7fbd5c813ad4 100644
+--- a/net/ipv6/netfilter/ip6_tables.c
++++ b/net/ipv6/netfilter/ip6_tables.c
+@@ -832,7 +832,7 @@ translate_table(struct net *net, struct xt_table_info *newinfo, void *entry0,
+ 		if (strcmp(ip6t_get_target(iter)->u.user.name,
+ 		    XT_ERROR_TARGET) == 0)
+ 			++newinfo->stacksize;
+-	}
++		}
+ 
+ 	ret = -EINVAL;
+ 	if (i != repl->num_entries) {

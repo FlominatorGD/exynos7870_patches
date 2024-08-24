@@ -1,0 +1,12 @@
+diff --git a/drivers/muic/universal/muic_usb.h b/drivers/muic/universal/muic_usb.h
+new file mode 100644
+index 000000000000..70033061d6a4
+--- /dev/null
++++ b/drivers/muic/universal/muic_usb.h
+@@ -0,0 +1,6 @@
++#ifndef _MUIC_USB_
++#define _MUIC_USB_
++
++extern void muic_register_usb_notifier(muic_data_t *pmuic);
++extern void muic_unregister_usb_notifier(muic_data_t *pmuic);
++#endif

@@ -1,0 +1,12 @@
+diff --git a/drivers/scsi/aic7xxx/.gitignore b/drivers/scsi/aic7xxx/.gitignore
+deleted file mode 100644
+index b8ee24d5748a..000000000000
+--- a/drivers/scsi/aic7xxx/.gitignore
++++ /dev/null
+@@ -1,6 +0,0 @@
+-aic79xx_reg.h
+-aic79xx_reg_print.c
+-aic79xx_seq.h
+-aic7xxx_reg.h
+-aic7xxx_reg_print.c
+-aic7xxx_seq.h

@@ -1,0 +1,15 @@
+diff --git a/include/linux/mmc/sd.h b/include/linux/mmc/sd.h
+index 1ebcf9ba1256..8703cd80f9ab 100644
+--- a/include/linux/mmc/sd.h
++++ b/include/linux/mmc/sd.h
+@@ -91,4 +91,10 @@
+ #define SD_SWITCH_ACCESS_DEF	0
+ #define SD_SWITCH_ACCESS_HS	1
+ 
++/*
++ * Specific sdcard CID
++ */
++#define abnormal_sd_cid0 0x03534453
++#define abnormal_sd_cid1 0x44333247
++
+ #endif /* LINUX_MMC_SD_H */

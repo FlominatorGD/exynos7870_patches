@@ -1,0 +1,13 @@
+diff --git a/fs/f2fs/node.h b/fs/f2fs/node.h
+index e05af5df5648..1c73d879a9bc 100644
+--- a/fs/f2fs/node.h
++++ b/fs/f2fs/node.h
+@@ -361,7 +361,7 @@ static inline int set_nid(struct page *p, int off, nid_t nid, bool i)
+ {
+ 	struct f2fs_node *rn = F2FS_NODE(p);
+ 
+-	f2fs_wait_on_page_writeback(p, NODE, true, true);
++	f2fs_wait_on_page_writeback(p, NODE, true);
+ 
+ 	if (i)
+ 		rn->i.i_nid[off - NODE_DIR1_BLOCK] = cpu_to_le32(nid);

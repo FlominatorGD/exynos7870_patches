@@ -1,0 +1,24 @@
+diff --git a/drivers/media/mtv/isdbt_port_fc8300.h b/drivers/media/mtv/isdbt_port_fc8300.h
+new file mode 100755
+index 000000000000..125d4a734499
+--- /dev/null
++++ b/drivers/media/mtv/isdbt_port_fc8300.h
+@@ -0,0 +1,18 @@
++
++#ifndef __ISDBT_PORT_H__
++#define __ISDBT_PORT_H__
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++#include "isdbt.h"
++#include "fc8300/fc8300.h"
++
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif
++

@@ -1,0 +1,12 @@
+diff --git a/drivers/pinctrl/Makefile b/drivers/pinctrl/Makefile
+index 51f52d32859e..92e73e79d055 100644
+--- a/drivers/pinctrl/Makefile
++++ b/drivers/pinctrl/Makefile
+@@ -1,6 +1,7 @@
+ # generic pinmux support
+ 
+ ccflags-$(CONFIG_DEBUG_PINCTRL)	+= -DDEBUG
++ccflags-y := $(KBUILD_FP_SENSOR_CFLAGS)
+ 
+ obj-$(CONFIG_PINCTRL)		+= core.o pinctrl-utils.o
+ obj-$(CONFIG_PINMUX)		+= pinmux.o

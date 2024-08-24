@@ -1,0 +1,13 @@
+diff --git a/security/samsung/dsms/Kconfig b/security/samsung/dsms/Kconfig
+new file mode 100644
+index 000000000000..b319cb2452ec
+--- /dev/null
++++ b/security/samsung/dsms/Kconfig
+@@ -0,0 +1,7 @@
++config SECURITY_DSMS
++	bool "DSMS Support"
++	depends on SECURITY
++	default n
++	help
++	  This selects the DSMS support.
++	  If you are unsure how to answer this question, answer N.

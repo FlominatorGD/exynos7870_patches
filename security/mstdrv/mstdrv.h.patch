@@ -1,0 +1,13 @@
+diff --git a/security/mstdrv/mstdrv.h b/security/mstdrv/mstdrv.h
+new file mode 100644
+index 000000000000..df3f79377dce
+--- /dev/null
++++ b/security/mstdrv/mstdrv.h
+@@ -0,0 +1,6 @@
++#ifndef MST_DRV_H
++#define MST_DRV_H
++
++#define MST_DRV_DEV     "mst_drv"
++
++#endif	/* MST_FTMDRV_H */
+\ No newline at end of file

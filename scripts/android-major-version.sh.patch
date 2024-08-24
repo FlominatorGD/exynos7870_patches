@@ -1,0 +1,11 @@
+diff --git a/scripts/android-major-version.sh b/scripts/android-major-version.sh
+new file mode 100644
+index 000000000000..e80647029558
+--- /dev/null
++++ b/scripts/android-major-version.sh
+@@ -0,0 +1,5 @@
++#!/bin/sh
++
++MAJOR=$(echo $1 | cut -d '.' -f 1)
++let MAJOR=MAJOR+103
++printf "%b" "$(printf '\%03o' $MAJOR)"

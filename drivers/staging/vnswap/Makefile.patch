@@ -1,0 +1,7 @@
+diff --git a/drivers/staging/vnswap/Makefile b/drivers/staging/vnswap/Makefile
+new file mode 100644
+index 000000000000..16fd89cad3dd
+--- /dev/null
++++ b/drivers/staging/vnswap/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_VNSWAP)	+= vnswap.o vnswap_sysfs.o

@@ -1,0 +1,23 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/include/fimc-is-i2c.h b/drivers/media/platform/exynos/fimc-is2/include/fimc-is-i2c.h
+new file mode 100644
+index 000000000000..761dc301aff4
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/include/fimc-is-i2c.h
+@@ -0,0 +1,17 @@
++/*
++ * Samsung Exynos5 SoC series FIMC-IS driver
++ *
++ *
++ * Copyright (c) 2011 Samsung Electronics Co., Ltd
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++ */
++
++#ifndef FIMC_IS_I2C_H
++#define FIMC_IS_I2C_H
++
++#include <linux/i2c.h>
++
++#endif

@@ -1,0 +1,8 @@
+diff --git a/include/linux/ion.h b/include/linux/ion.h
+new file mode 120000
+index 000000000000..babfc1565a87
+--- /dev/null
++++ b/include/linux/ion.h
+@@ -0,0 +1 @@
++../../drivers/staging/android/ion/ion.h
+\ No newline at end of file

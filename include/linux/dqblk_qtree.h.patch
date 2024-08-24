@@ -1,0 +1,19 @@
+diff --git a/include/linux/dqblk_qtree.h b/include/linux/dqblk_qtree.h
+index 82a16527b367..1dcfecb82a79 100644
+--- a/include/linux/dqblk_qtree.h
++++ b/include/linux/dqblk_qtree.h
+@@ -15,6 +15,7 @@
+ #define QTREE_DEL_REWRITE 6
+ 
+ struct dquot;
++struct kqid;
+ 
+ /* Operations */
+ struct qtree_fmt_operations {
+@@ -52,5 +53,6 @@ static inline int qtree_depth(struct qtree_mem_dqinfo *info)
+ 		entries *= epb;
+ 	return i;
+ }
++int qtree_get_next_id(struct qtree_mem_dqinfo *info, struct kqid *qid);
+ 
+ #endif /* _LINUX_DQBLK_QTREE_H */

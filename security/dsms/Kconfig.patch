@@ -1,0 +1,13 @@
+diff --git a/security/dsms/Kconfig b/security/dsms/Kconfig
+new file mode 100644
+index 000000000000..b319cb2452ec
+--- /dev/null
++++ b/security/dsms/Kconfig
+@@ -0,0 +1,7 @@
++config SECURITY_DSMS
++	bool "DSMS Support"
++	depends on SECURITY
++	default n
++	help
++	  This selects the DSMS support.
++	  If you are unsure how to answer this question, answer N.

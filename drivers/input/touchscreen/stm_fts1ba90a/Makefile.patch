@@ -1,0 +1,8 @@
+diff --git a/drivers/input/touchscreen/stm_fts1ba90a/Makefile b/drivers/input/touchscreen/stm_fts1ba90a/Makefile
+new file mode 100644
+index 000000000000..693e1b619777
+--- /dev/null
++++ b/drivers/input/touchscreen/stm_fts1ba90a/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_TOUCHSCREEN_FTS1BA90A)	+= fts_ts.o fts_fwu.o
+\ No newline at end of file

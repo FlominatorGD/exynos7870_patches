@@ -1,0 +1,16 @@
+diff --git a/drivers/staging/android/sync.h b/drivers/staging/android/sync.h
+index a21b79fb4c8e..76fea5a25b25 100644
+--- a/drivers/staging/android/sync.h
++++ b/drivers/staging/android/sync.h
+@@ -160,7 +160,10 @@ struct sync_fence {
+ #endif
+ 	int num_fences;
+ 
+-	wait_queue_head_t	wq;
++	union {
++		wait_queue_head_t	wq;
++		struct llist_node	rmnode;
++	};
+ 	atomic_t		status;
+ 
+ 	struct sync_fence_cb	cbs[];

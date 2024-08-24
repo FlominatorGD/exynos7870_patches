@@ -1,0 +1,19 @@
+diff --git a/drivers/misc/gnss_if/Kconfig b/drivers/misc/gnss_if/Kconfig
+new file mode 100644
+index 000000000000..85b67d8e31f2
+--- /dev/null
++++ b/drivers/misc/gnss_if/Kconfig
+@@ -0,0 +1,13 @@
++config GNSS_SHMEM_IF
++	bool "Samsung Shared memory Interface for GNSS"
++	depends on MCU_IPC
++	default n
++	---help---
++	  Samsung Shared Memory Interface for GNSS.
++
++config GNSS_DISABLE
++	bool "Disable GNSS for WIFI only model"
++	depends on GNSS_SHMEM_IF
++	default n
++	---help---
++	  Disable GNSS for WIFI only model(Hibernation mode)

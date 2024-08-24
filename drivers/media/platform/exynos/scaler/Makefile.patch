@@ -1,0 +1,17 @@
+diff --git a/drivers/media/platform/exynos/scaler/Makefile b/drivers/media/platform/exynos/scaler/Makefile
+new file mode 100644
+index 000000000000..4948e8a93772
+--- /dev/null
++++ b/drivers/media/platform/exynos/scaler/Makefile
+@@ -0,0 +1,11 @@
++#
++# Copyright (c) 2012 Samsung Electronics Co., Ltd.
++#		http://www.samsung.com
++#
++# Licensed under GPLv2
++#
++
++scaler-objs := scaler-core.o scaler-regs.o
++obj-$(CONFIG_VIDEO_EXYNOS_SCALER)	+= scaler.o
++
++ccflags-$(CONFIG_SCALER_NO_SOFTRST) += -DSC_NO_SOFTRST

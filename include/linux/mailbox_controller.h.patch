@@ -1,0 +1,13 @@
+diff --git a/include/linux/mailbox_controller.h b/include/linux/mailbox_controller.h
+index d4cf96f07cfc..932f08f8d5c6 100644
+--- a/include/linux/mailbox_controller.h
++++ b/include/linux/mailbox_controller.h
+@@ -48,7 +48,7 @@ struct mbox_chan_ops {
+ 	int (*send_data)(struct mbox_chan *chan, void *data);
+ 	int (*startup)(struct mbox_chan *chan);
+ 	void (*shutdown)(struct mbox_chan *chan);
+-	bool (*last_tx_done)(struct mbox_chan *chan);
++	int (*last_tx_done)(struct mbox_chan *chan);
+ 	bool (*peek_data)(struct mbox_chan *chan);
+ };
+ 

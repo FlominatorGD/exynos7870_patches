@@ -1,0 +1,15 @@
+diff --git a/drivers/media/platform/exynos/hevc/Kconfig b/drivers/media/platform/exynos/hevc/Kconfig
+new file mode 100644
+index 000000000000..60f585cc8d98
+--- /dev/null
++++ b/drivers/media/platform/exynos/hevc/Kconfig
+@@ -0,0 +1,9 @@
++config VIDEO_EXYNOS_HEVC
++	bool "Exynos HEVC Driver"
++	default n
++	depends on VIDEO_EXYNOS
++	select VIDEOBUF2_CORE
++	select EXYNOS_HEVC_V1
++	---help---
++	  HEVC driver for V4L2.
++

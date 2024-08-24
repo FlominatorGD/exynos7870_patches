@@ -1,0 +1,15 @@
+diff --git a/drivers/input/touchscreen/synaptics_dsx_2.6/Kconfig b/drivers/input/touchscreen/synaptics_dsx_2.6/Kconfig
+new file mode 100644
+index 000000000000..9ea1112db69e
+--- /dev/null
++++ b/drivers/input/touchscreen/synaptics_dsx_2.6/Kconfig
+@@ -0,0 +1,9 @@
++#
++# Synaptics DSX v2.6 touchscreen driver configuration
++#
++config TOUCHSCREEN_SYNAPTICS_DSX_v26
++	tristate "Synaptics DSX i2c touchscreen"
++	depends on I2C
++	help
++	  This enables support for Synaptics DSX over I2C based touchscreens.
++

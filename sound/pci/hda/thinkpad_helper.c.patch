@@ -1,0 +1,12 @@
+diff --git a/sound/pci/hda/thinkpad_helper.c b/sound/pci/hda/thinkpad_helper.c
+index 5b8a121cec82..6579e832881b 100644
+--- a/sound/pci/hda/thinkpad_helper.c
++++ b/sound/pci/hda/thinkpad_helper.c
+@@ -72,6 +72,7 @@ static void hda_fixup_thinkpad_acpi(struct hda_codec *codec,
+ 		if (led_set_func(TPACPI_LED_MUTE, false) >= 0) {
+ 			old_vmaster_hook = spec->vmaster_mute.hook;
+ 			spec->vmaster_mute.hook = update_tpacpi_mute_led;
++			spec->vmaster_mute_enum = 1;
+ 			removefunc = false;
+ 		}
+ 		if (led_set_func(TPACPI_LED_MICMUTE, false) >= 0) {

@@ -1,0 +1,13 @@
+diff --git a/scripts/Makefile.host b/scripts/Makefile.host
+index 133edfae5b8a..a89a0c5d43b2 100644
+--- a/scripts/Makefile.host
++++ b/scripts/Makefile.host
+@@ -85,7 +85,7 @@ hostcxx_flags  = -Wp,-MD,$(depfile) $(__hostcxx_flags)
+ # Create executable from a single .c file
+ # host-csingle -> Executable
+ quiet_cmd_host-csingle 	= HOSTCC  $@
+-      cmd_host-csingle	= $(HOSTCC) $(hostc_flags) -o $@ $< \
++      cmd_host-csingle	= $(HOSTCC) $(hostc_flags) $(HOSTLDFLAGS) -o $@ $< \
+ 	  	$(HOST_LOADLIBES) $(HOSTLOADLIBES_$(@F))
+ $(host-csingle): $(obj)/%: $(src)/%.c FORCE
+ 	$(call if_changed_dep,host-csingle)

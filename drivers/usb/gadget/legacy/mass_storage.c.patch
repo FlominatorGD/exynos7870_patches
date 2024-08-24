@@ -1,0 +1,15 @@
+diff --git a/drivers/usb/gadget/legacy/mass_storage.c b/drivers/usb/gadget/legacy/mass_storage.c
+index ae023d036fba..8e27a8c96444 100644
+--- a/drivers/usb/gadget/legacy/mass_storage.c
++++ b/drivers/usb/gadget/legacy/mass_storage.c
+@@ -146,6 +146,10 @@ static int __init msg_do_config(struct usb_configuration *c)
+ 	if (IS_ERR(f_msg))
+ 		return PTR_ERR(f_msg);
+ 
++	ret = fsg_common_run_thread(opts->common);
++	if (ret)
++		goto put_func;
++
+ 	ret = usb_add_function(c, f_msg);
+ 	if (ret)
+ 		goto put_func;

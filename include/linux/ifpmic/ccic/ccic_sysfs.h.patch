@@ -1,0 +1,23 @@
+diff --git a/include/linux/ifpmic/ccic/ccic_sysfs.h b/include/linux/ifpmic/ccic/ccic_sysfs.h
+new file mode 100644
+index 000000000000..d229f7f1ed2e
+--- /dev/null
++++ b/include/linux/ifpmic/ccic/ccic_sysfs.h
+@@ -0,0 +1,17 @@
++#ifndef __CCIC_SYSFS__
++#define __CCIC_SYSFS__
++
++extern const struct attribute_group ccic_sysfs_group;
++
++#define CCIC_MAX_FW_PATH	64
++#define CCIC_DEFAULT_FW		"usbpd/s2mm005.bin"
++#define CCIC_DEFAULT_FULL_FW		"usbpd/USB_PD_FULL_DRIVER.bin"
++#define CCIC_DEFAULT_UMS_FW			"/sdcard/Firmware/usbpd/s2mm005.bin"
++#define CCIC_DEFAULT_FULL_UMS_FW	"/sdcard/Firmware/usbpd/USB_PD_FULL_DRIVER.bin"
++
++enum {
++	BUILT_IN = 0,
++	UMS,
++};
++
++#endif

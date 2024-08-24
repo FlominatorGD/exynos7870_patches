@@ -1,0 +1,21 @@
+diff --git a/fs/fuse/dev.c b/fs/fuse/dev.c
+index d2e05e6f6852..deb73e155bbd 100644
+--- a/fs/fuse/dev.c
++++ b/fs/fuse/dev.c
+@@ -7,6 +7,7 @@
+ */
+ 
+ #include "fuse_i.h"
++#include "fuse_shortcircuit.h"
+ 
+ #include <linux/init.h>
+ #include <linux/module.h>
+@@ -1879,6 +1880,8 @@ static ssize_t fuse_dev_do_write(struct fuse_conn *fc,
+ 	}
+ 	fuse_copy_finish(cs);
+ 
++	fuse_setup_shortcircuit(fc, req);
++
+ 	spin_lock(&fc->lock);
+ 	req->locked = 0;
+ 	if (!err) {

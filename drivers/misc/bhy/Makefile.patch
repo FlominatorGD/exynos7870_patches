@@ -1,0 +1,14 @@
+diff --git a/drivers/misc/bhy/Makefile b/drivers/misc/bhy/Makefile
+new file mode 100644
+index 000000000000..870d3a547605
+--- /dev/null
++++ b/drivers/misc/bhy/Makefile
+@@ -0,0 +1,7 @@
++#
++# Makefile for Bosch sensor driver.
++#
++obj-$(CONFIG_SENSORS_BHI)    += bstclass.o
++obj-$(CONFIG_SENSORS_BHI)    += bhy_core.o
++obj-$(CONFIG_SENSORS_BHI)    += bhy_i2c.o
++obj-$(CONFIG_SENSORS_BHI_BMP280) += pressure_bmp280.o
+\ No newline at end of file

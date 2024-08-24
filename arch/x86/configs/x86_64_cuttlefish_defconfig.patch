@@ -1,0 +1,13 @@
+diff --git a/arch/x86/configs/x86_64_cuttlefish_defconfig b/arch/x86/configs/x86_64_cuttlefish_defconfig
+index 0360d81d648d..c712f8a3a28c 100644
+--- a/arch/x86/configs/x86_64_cuttlefish_defconfig
++++ b/arch/x86/configs/x86_64_cuttlefish_defconfig
+@@ -369,7 +369,7 @@ CONFIG_USB_CONFIGFS=y
+ CONFIG_USB_CONFIGFS_F_FS=y
+ CONFIG_SWITCH=y
+ CONFIG_RTC_CLASS=y
+-CONFIG_RTC_DRV_TEST=y
++# CONFIG_RTC_HCTOSYS is not set
+ CONFIG_VIRTIO_PCI=y
+ CONFIG_VIRTIO_BALLOON=y
+ CONFIG_VIRTIO_MMIO=y

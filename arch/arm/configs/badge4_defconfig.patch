@@ -1,0 +1,12 @@
+diff --git a/arch/arm/configs/badge4_defconfig b/arch/arm/configs/badge4_defconfig
+index 7765ff673863..0494c8f229a2 100644
+--- a/arch/arm/configs/badge4_defconfig
++++ b/arch/arm/configs/badge4_defconfig
+@@ -98,6 +98,7 @@ CONFIG_USB_SERIAL_PL2303=m
+ CONFIG_USB_SERIAL_CYBERJACK=m
+ CONFIG_USB_SERIAL_XIRCOM=m
+ CONFIG_USB_SERIAL_OMNINET=m
++CONFIG_USB_RIO500=m
+ CONFIG_EXT2_FS=m
+ CONFIG_EXT3_FS=m
+ CONFIG_MSDOS_FS=y

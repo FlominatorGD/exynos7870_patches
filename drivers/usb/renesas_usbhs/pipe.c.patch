@@ -1,0 +1,26 @@
+diff --git a/drivers/usb/renesas_usbhs/pipe.c b/drivers/usb/renesas_usbhs/pipe.c
+index c7b8d80cb4d9..040bcefcb040 100644
+--- a/drivers/usb/renesas_usbhs/pipe.c
++++ b/drivers/usb/renesas_usbhs/pipe.c
+@@ -263,21 +263,6 @@ int usbhs_pipe_is_accessible(struct usbhs_pipe *pipe)
+ 	return -EBUSY;
+ }
+ 
+-bool usbhs_pipe_contains_transmittable_data(struct usbhs_pipe *pipe)
+-{
+-	u16 val;
+-
+-	/* Do not support for DCP pipe */
+-	if (usbhs_pipe_is_dcp(pipe))
+-		return false;
+-
+-	val = usbhsp_pipectrl_get(pipe);
+-	if (val & INBUFM)
+-		return true;
+-
+-	return false;
+-}
+-
+ /*
+  *		PID ctrl
+  */

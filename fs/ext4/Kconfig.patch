@@ -1,0 +1,12 @@
+diff --git a/fs/ext4/Kconfig b/fs/ext4/Kconfig
+index bf8bc8aba471..e24dd537b0f7 100644
+--- a/fs/ext4/Kconfig
++++ b/fs/ext4/Kconfig
+@@ -43,6 +43,7 @@ config EXT4_FS_POSIX_ACL
+ 	bool "Ext4 POSIX Access Control Lists"
+ 	depends on EXT4_FS
+ 	select FS_POSIX_ACL
++	default y if ANDROID_VERSION >= "90000"
+ 	help
+ 	  POSIX Access Control Lists (ACLs) support permissions for users and
+ 	  groups beyond the owner/group/world scheme.

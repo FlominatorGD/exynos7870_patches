@@ -1,0 +1,15 @@
+diff --git a/drivers/iio/magnetometer/yas537/Kconfig b/drivers/iio/magnetometer/yas537/Kconfig
+new file mode 100755
+index 000000000000..e63a95b973c4
+--- /dev/null
++++ b/drivers/iio/magnetometer/yas537/Kconfig
+@@ -0,0 +1,9 @@
++#
++# Magnetometer sensors
++#
++
++config SENSORS_YAS_INPUT_MAGNETOMETER
++	tristate "Yamaha 3-Axis Magnetometer"
++	depends on IIO
++	help
++	  Say Y here to add support for the Yamaha 3-Axis Magnetometer.

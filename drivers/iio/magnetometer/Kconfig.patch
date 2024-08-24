@@ -1,0 +1,16 @@
+diff --git a/drivers/iio/magnetometer/Kconfig b/drivers/iio/magnetometer/Kconfig
+index b2dba9e506ab..4d1e02e6a9ca 100644
+--- a/drivers/iio/magnetometer/Kconfig
++++ b/drivers/iio/magnetometer/Kconfig
+@@ -79,4 +79,11 @@ config IIO_ST_MAGN_SPI_3AXIS
+ 	depends on IIO_ST_MAGN_3AXIS
+ 	depends on IIO_ST_SENSORS_SPI
+ 
++config SENSORS_YAS_MAGNETOMETER
++	tristate "Yamaha 3-Axis Magnetometer"
++	depends on I2C
++	help
++	  Say Y here to add support for the Yamaha 3-Axis Magnetometer.
++
++source "drivers/iio/magnetometer/yas537/Kconfig"
+ endmenu

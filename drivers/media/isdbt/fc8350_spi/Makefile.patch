@@ -1,0 +1,10 @@
+diff --git a/drivers/media/isdbt/fc8350_spi/Makefile b/drivers/media/isdbt/fc8350_spi/Makefile
+new file mode 100644
+index 000000000000..0628151a3b2a
+--- /dev/null
++++ b/drivers/media/isdbt/fc8350_spi/Makefile
+@@ -0,0 +1,4 @@
++#
++# Makefile for the kernel character device drivers.
++#
++obj-y += src/

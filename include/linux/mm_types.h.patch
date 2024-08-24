@@ -1,0 +1,12 @@
+diff --git a/include/linux/mm_types.h b/include/linux/mm_types.h
+index d9e52110e65a..939f7adb9fee 100644
+--- a/include/linux/mm_types.h
++++ b/include/linux/mm_types.h
+@@ -425,7 +425,6 @@ struct mm_struct {
+ 	 */
+ 	struct task_struct __rcu *owner;
+ #endif
+-	struct user_namespace *user_ns;
+ 
+ 	/* store ref to file /proc/<pid>/exe symlink points to */
+ 	struct file *exe_file;

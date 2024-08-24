@@ -1,0 +1,12 @@
+diff --git a/drivers/media/platform/coda/coda-bit.c b/drivers/media/platform/coda/coda-bit.c
+index 601a70be9fe3..cc080097dac4 100644
+--- a/drivers/media/platform/coda/coda-bit.c
++++ b/drivers/media/platform/coda/coda-bit.c
+@@ -1846,6 +1846,7 @@ irqreturn_t coda_irq_handler(int irq, void *data)
+ 	if (ctx == NULL) {
+ 		v4l2_err(&dev->v4l2_dev,
+ 			 "Instance released before the end of transaction\n");
++		mutex_unlock(&dev->coda_mutex);
+ 		return IRQ_HANDLED;
+ 	}
+ 

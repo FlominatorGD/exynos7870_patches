@@ -1,0 +1,13 @@
+diff --git a/drivers/pci/pcie/Kconfig b/drivers/pci/pcie/Kconfig
+index 7958e59d6077..cb9d4f08f846 100644
+--- a/drivers/pci/pcie/Kconfig
++++ b/drivers/pci/pcie/Kconfig
+@@ -30,7 +30,7 @@ source "drivers/pci/pcie/aer/Kconfig"
+ config PCIEASPM
+ 	bool "PCI Express ASPM control" if EXPERT
+ 	depends on PCI && PCIEPORTBUS
+-	default y
++	default n
+ 	help
+ 	  This enables OS control over PCI Express ASPM (Active State
+ 	  Power Management) and Clock Power Management. ASPM supports

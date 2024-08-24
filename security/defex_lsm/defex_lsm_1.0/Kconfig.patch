@@ -1,0 +1,14 @@
+diff --git a/security/defex_lsm/defex_lsm_1.0/Kconfig b/security/defex_lsm/defex_lsm_1.0/Kconfig
+new file mode 100755
+index 000000000000..cbf85ae00e4e
+--- /dev/null
++++ b/security/defex_lsm/defex_lsm_1.0/Kconfig
+@@ -0,0 +1,7 @@
++config SECURITY_DEFEX
++	bool "Defex Support"
++	depends on SECURITY
++	default n
++	help
++	  This selects the Defex support.
++	  If you are unsure how to answer this question, answer N.
+\ No newline at end of file

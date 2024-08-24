@@ -1,0 +1,13 @@
+diff --git a/security/proca/gaf/Makefile b/security/proca/gaf/Makefile
+new file mode 100644
+index 000000000000..2586a2fc70ee
+--- /dev/null
++++ b/security/proca/gaf/Makefile
+@@ -0,0 +1,7 @@
++# When adding new entries keep the list in alphabetical order
++obj-$(CONFIG_GAF_V3)		+= gaf_v3.o
++obj-$(CONFIG_GAF_V4)		+= gaf_v4.o
++obj-$(CONFIG_GAF_V5)		+= gaf_v5.o
++obj-$(CONFIG_GAF_V6)		+= gaf_v6.o
++
++ccflags-y += -Isecurity/proca

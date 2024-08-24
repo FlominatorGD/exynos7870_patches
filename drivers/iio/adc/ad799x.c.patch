@@ -1,0 +1,17 @@
+diff --git a/drivers/iio/adc/ad799x.c b/drivers/iio/adc/ad799x.c
+index f7ed32a46a77..13880c9b15c9 100644
+--- a/drivers/iio/adc/ad799x.c
++++ b/drivers/iio/adc/ad799x.c
+@@ -823,10 +823,10 @@ static int ad799x_probe(struct i2c_client *client,
+ 
+ 	ret = ad799x_write_config(st, st->chip_config->default_config);
+ 	if (ret < 0)
+-		goto error_disable_vref;
++		goto error_disable_reg;
+ 	ret = ad799x_read_config(st);
+ 	if (ret < 0)
+-		goto error_disable_vref;
++		goto error_disable_reg;
+ 	st->config = ret;
+ 
+ 	ret = iio_triggered_buffer_setup(indio_dev, NULL,

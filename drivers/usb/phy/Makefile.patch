@@ -1,0 +1,14 @@
+diff --git a/drivers/usb/phy/Makefile b/drivers/usb/phy/Makefile
+index 5cd78717b13f..6fec9fffe833 100644
+--- a/drivers/usb/phy/Makefile
++++ b/drivers/usb/phy/Makefile
+@@ -4,8 +4,8 @@
+ obj-$(CONFIG_USB_PHY)			+= phy.o
+ obj-$(CONFIG_OF)			+= of.o
+ obj-$(CONFIG_USB_OTG_WAKELOCK)		+= otg-wakelock.o
+-obj-$(CONFIG_DUAL_ROLE_USB_INTF)	+= class-dual-role.o
+ 
++obj-$(CONFIG_DUAL_ROLE_USB_INTF)	+= class-dual-role.o
+ # transceiver drivers, keep the list sorted
+ 
+ obj-$(CONFIG_AB8500_USB)		+= phy-ab8500-usb.o

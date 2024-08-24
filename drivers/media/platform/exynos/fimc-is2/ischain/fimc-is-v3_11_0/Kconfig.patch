@@ -1,0 +1,20 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/ischain/fimc-is-v3_11_0/Kconfig b/drivers/media/platform/exynos/fimc-is2/ischain/fimc-is-v3_11_0/Kconfig
+new file mode 100644
+index 000000000000..6c83fb069fcc
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/ischain/fimc-is-v3_11_0/Kconfig
+@@ -0,0 +1,14 @@
++config FIMC_IS_V3_11_0
++	bool "Use fimc-is v3.11.0"
++	depends on EXYNOS_FIMC_IS
++	default n
++	help
++	  fimc-is version 3.11.0
++
++config CAMERA_MIPI_PHY_SELECT_M0S2
++	bool "CSI1 MIPI SELECT"
++	depends on FIMC_IS_V3_11_0
++	default n
++	help
++	  This flags enables M0S2 PHY line for CSI1
++

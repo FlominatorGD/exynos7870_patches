@@ -1,0 +1,8 @@
+diff --git a/drivers/misc/tzdev/lib/Makefile b/drivers/misc/tzdev/lib/Makefile
+new file mode 100644
+index 000000000000..3281200fca8c
+--- /dev/null
++++ b/drivers/misc/tzdev/lib/Makefile
+@@ -0,0 +1,2 @@
++obj-y	+= circ_buf.o
++obj-y	+= circ_buf_packet.o

@@ -1,0 +1,8 @@
+diff --git a/drivers/input/touchscreen/synaptics_dsx/Multiverse/Makefile b/drivers/input/touchscreen/synaptics_dsx/Multiverse/Makefile
+new file mode 100644
+index 000000000000..30c27ef50dc9
+--- /dev/null
++++ b/drivers/input/touchscreen/synaptics_dsx/Multiverse/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_DSX)	+= GMvBrane.o GMvSystem.o
+\ No newline at end of file

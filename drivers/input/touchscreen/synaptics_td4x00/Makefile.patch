@@ -1,0 +1,8 @@
+diff --git a/drivers/input/touchscreen/synaptics_td4x00/Makefile b/drivers/input/touchscreen/synaptics_td4x00/Makefile
+new file mode 100644
+index 000000000000..0c2a4d7d136b
+--- /dev/null
++++ b/drivers/input/touchscreen/synaptics_td4x00/Makefile
+@@ -0,0 +1,2 @@
++obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_TD4X00)	+= synaptics_i2c_rmi.o rmi_dev.o rmi_fw_update.o rmi_f54.o
++obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_TD4X01_A2CORELTE)	+= synaptics_i2c_rmi.o rmi_dev.o rmi_fw_update.o rmi_f54.o

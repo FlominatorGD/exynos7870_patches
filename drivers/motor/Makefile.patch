@@ -1,0 +1,12 @@
+diff --git a/drivers/motor/Makefile b/drivers/motor/Makefile
+new file mode 100644
+index 000000000000..9340bad65643
+--- /dev/null
++++ b/drivers/motor/Makefile
+@@ -0,0 +1,6 @@
++#
++# Makefile for the vibrator driver ICs with vibrator driver
++#
++
++obj-$(CONFIG_SEC_VIB)	+= sec_vib.o
++obj-$(CONFIG_ISA1000)		+= isa1000.o

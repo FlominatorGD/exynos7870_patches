@@ -1,0 +1,13 @@
+diff --git a/security/sdp/Makefile b/security/sdp/Makefile
+new file mode 100644
+index 000000000000..142010f504f4
+--- /dev/null
++++ b/security/sdp/Makefile
+@@ -0,0 +1,7 @@
++#
++# Makefile for DEK and DLP modules
++#
++
++obj-$(CONFIG_SDP) += dek.o dek_aes.o sdp_mm.o pub_crypto_emul.o dek_sysfs.o cache_cleanup.o kek_pack.o fs_handler.o 
++obj-$(CONFIG_DLP) += sdp_dlp.o
++

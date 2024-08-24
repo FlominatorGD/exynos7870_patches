@@ -1,0 +1,14 @@
+diff --git a/net/ncm/Kconfig b/net/ncm/Kconfig
+new file mode 100644
+index 000000000000..3968fdffa341
+--- /dev/null
++++ b/net/ncm/Kconfig
+@@ -0,0 +1,8 @@
++#
++# Network Context Module Configuration
++#
++
++config KNOX_NCM
++  tristate "Network Context Module Support"
++  depends on NET
++  default y

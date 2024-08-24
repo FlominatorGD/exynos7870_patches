@@ -1,0 +1,14 @@
+diff --git a/kernel/irq/manage.c b/kernel/irq/manage.c
+index 0eb64f8e1b65..bb2088416180 100644
+--- a/kernel/irq/manage.c
++++ b/kernel/irq/manage.c
+@@ -1195,6 +1195,9 @@ __setup_irq(unsigned int irq, struct irq_desc *desc, struct irqaction *new)
+ 			irqd_set(&desc->irq_data, IRQD_NO_BALANCING);
+ 		}
+ 
++		if (new->flags & IRQF_GIC_MULTI_TARGET)
++			irqd_set(&desc->irq_data, IRQD_GIC_MULTI_TARGET);
++
+ 		/* Set default affinity mask once everything is setup */
+ 		setup_affinity(irq, desc, mask);
+ 

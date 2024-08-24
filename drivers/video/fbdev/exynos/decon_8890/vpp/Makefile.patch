@@ -1,0 +1,8 @@
+diff --git a/drivers/video/fbdev/exynos/decon_8890/vpp/Makefile b/drivers/video/fbdev/exynos/decon_8890/vpp/Makefile
+new file mode 100644
+index 000000000000..5bcc65d1931b
+--- /dev/null
++++ b/drivers/video/fbdev/exynos/decon_8890/vpp/Makefile
+@@ -0,0 +1,2 @@
++vpp-objs := vpp_drv.o vpp_reg_8890.o
++obj-$(CONFIG_EXYNOS_VPP) += vpp.o

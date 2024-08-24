@@ -1,0 +1,15 @@
+diff --git a/include/linux/lz4.h b/include/linux/lz4.h
+index 4356686b0a39..6b784c59f321 100644
+--- a/include/linux/lz4.h
++++ b/include/linux/lz4.h
+@@ -9,8 +9,8 @@
+  * it under the terms of the GNU General Public License version 2 as
+  * published by the Free Software Foundation.
+  */
+-#define LZ4_MEM_COMPRESS	(4096 * sizeof(unsigned char *))
+-#define LZ4HC_MEM_COMPRESS	(65538 * sizeof(unsigned char *))
++#define LZ4_MEM_COMPRESS	(16384)
++#define LZ4HC_MEM_COMPRESS	(262144 + (2 * sizeof(unsigned char *)))
+ 
+ /*
+  * lz4_compressbound()

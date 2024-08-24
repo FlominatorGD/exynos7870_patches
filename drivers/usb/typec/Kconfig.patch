@@ -1,0 +1,17 @@
+diff --git a/drivers/usb/typec/Kconfig b/drivers/usb/typec/Kconfig
+new file mode 100644
+index 000000000000..7444488b9960
+--- /dev/null
++++ b/drivers/usb/typec/Kconfig
+@@ -0,0 +1,11 @@
++
++menu "USB Power Delivery and Type-C drivers"
++
++config TYPEC
++	tristate
++	default y
++	depends on ANDROID_MAJOR_VERSION != "n"
++	depends on ANDROID_MAJOR_VERSION != "o"
++	depends on CCIC_NOTIFIER
++
++endmenu

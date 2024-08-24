@@ -1,0 +1,18 @@
+diff --git a/include/linux/sensor/k2hh.h b/include/linux/sensor/k2hh.h
+new file mode 100644
+index 000000000000..db5982168c8b
+--- /dev/null
++++ b/include/linux/sensor/k2hh.h
+@@ -0,0 +1,11 @@
++#ifndef __K2DH_DEV_H
++#define __K2DH_DEV_H
++
++
++/*Platform data */
++struct k2hh_platform_data {
++        signed char orientation[9];
++	unsigned int irq_gpio;
++};
++
++#endif
+\ No newline at end of file

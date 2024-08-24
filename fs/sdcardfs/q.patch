@@ -1,0 +1,8 @@
+diff --git a/fs/sdcardfs/q b/fs/sdcardfs/q
+new file mode 120000
+index 000000000000..4f6c4ee9d928
+--- /dev/null
++++ b/fs/sdcardfs/q
+@@ -0,0 +1 @@
++p
+\ No newline at end of file

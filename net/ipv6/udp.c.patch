@@ -1,0 +1,14 @@
+diff --git a/net/ipv6/udp.c b/net/ipv6/udp.c
+index 35caf0c59975..367eb4626052 100644
+--- a/net/ipv6/udp.c
++++ b/net/ipv6/udp.c
+@@ -429,7 +429,8 @@ try_again:
+ 		err = skb_copy_datagram_iovec(skb, sizeof(struct udphdr),
+ 					      msg->msg_iov, copied);
+ 	else {
+-		err = skb_copy_and_csum_datagram_iovec(skb, sizeof(struct udphdr), msg->msg_iov);
++		err = skb_copy_and_csum_datagram_iovec(skb, sizeof(struct udphdr),
++						       msg->msg_iov, copied);
+ 		if (err == -EINVAL)
+ 			goto csum_copy_err;
+ 	}

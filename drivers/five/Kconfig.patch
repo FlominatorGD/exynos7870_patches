@@ -1,0 +1,11 @@
+diff --git a/drivers/five/Kconfig b/drivers/five/Kconfig
+new file mode 100644
+index 000000000000..608dc15365b4
+--- /dev/null
++++ b/drivers/five/Kconfig
+@@ -0,0 +1,5 @@
++#
++# FIVE drivers configuration
++#
++
++source "drivers/five/five_tee_driver/Kconfig"

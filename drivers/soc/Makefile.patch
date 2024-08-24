@@ -1,0 +1,9 @@
+diff --git a/drivers/soc/Makefile b/drivers/soc/Makefile
+index 063113d0bd38..fcd7e37e2f01 100644
+--- a/drivers/soc/Makefile
++++ b/drivers/soc/Makefile
+@@ -6,3 +6,4 @@ obj-$(CONFIG_ARCH_QCOM)		+= qcom/
+ obj-$(CONFIG_ARCH_TEGRA)	+= tegra/
+ obj-$(CONFIG_SOC_TI)		+= ti/
+ obj-$(CONFIG_PLAT_VERSATILE)	+= versatile/
++obj-$(CONFIG_SOC_SAMSUNG)	+= samsung/

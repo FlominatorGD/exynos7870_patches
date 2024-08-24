@@ -1,0 +1,14 @@
+diff --git a/arch/arm64/include/asm/cacheflush.h b/arch/arm64/include/asm/cacheflush.h
+index 5d46c694e097..91f469002194 100644
+--- a/arch/arm64/include/asm/cacheflush.h
++++ b/arch/arm64/include/asm/cacheflush.h
+@@ -65,6 +65,9 @@
+  *		- kaddr  - page address
+  *		- size   - region size
+  */
++extern void flush_all_cpu_caches(void);
++extern void flush_cache_louis(void);
++extern void flush_cache_all(void);
+ extern void flush_cache_range(struct vm_area_struct *vma, unsigned long start, unsigned long end);
+ extern void flush_icache_range(unsigned long start, unsigned long end);
+ extern void __flush_dcache_area(void *addr, size_t len);

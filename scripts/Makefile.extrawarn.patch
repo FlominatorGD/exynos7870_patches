@@ -1,0 +1,13 @@
+diff --git a/scripts/Makefile.extrawarn b/scripts/Makefile.extrawarn
+index f9f4d8f718ad..1d3c76384439 100644
+--- a/scripts/Makefile.extrawarn
++++ b/scripts/Makefile.extrawarn
+@@ -60,7 +60,7 @@ endif
+ KBUILD_CFLAGS += $(warning)
+ else
+ 
+-ifeq ($(COMPILER),clang)
++ifeq ($(cc-name),clang)
+ KBUILD_CFLAGS += $(call cc-disable-warning, initializer-overrides)
+ KBUILD_CFLAGS += $(call cc-disable-warning, unused-value)
+ KBUILD_CFLAGS += $(call cc-disable-warning, format)

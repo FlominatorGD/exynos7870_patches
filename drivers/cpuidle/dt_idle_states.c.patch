@@ -1,0 +1,14 @@
+diff --git a/drivers/cpuidle/dt_idle_states.c b/drivers/cpuidle/dt_idle_states.c
+index 52f4d11bbf3f..f08e81c51559 100644
+--- a/drivers/cpuidle/dt_idle_states.c
++++ b/drivers/cpuidle/dt_idle_states.c
+@@ -38,6 +38,9 @@ static int init_state_node(struct cpuidle_state *idle_state,
+ 	 */
+ 	idle_state->enter = match_id->data;
+ 
++	if (!of_device_is_available(state_node))
++		idle_state->disabled = 1;
++
+ 	err = of_property_read_u32(state_node, "wakeup-latency-us",
+ 				   &idle_state->exit_latency);
+ 	if (err) {

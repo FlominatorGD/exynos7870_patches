@@ -1,0 +1,26 @@
+diff --git a/include/linux/selinux.h b/include/linux/selinux.h
+index 44f459612690..a225e09c29d8 100644
+--- a/include/linux/selinux.h
++++ b/include/linux/selinux.h
+@@ -24,12 +24,21 @@ struct kern_ipc_perm;
+  * selinux_is_enabled - is SELinux enabled?
+  */
+ bool selinux_is_enabled(void);
++/**
++ * selinux_is_enforcing - is SELinux Enforcing?
++ */
++bool selinux_is_enforcing(void);
+ #else
+ 
+ static inline bool selinux_is_enabled(void)
+ {
+ 	return false;
+ }
++
++static inline bool selinux_is_enforcing(void)
++{
++	return false;
++}
+ #endif	/* CONFIG_SECURITY_SELINUX */
+ 
+ #endif /* _LINUX_SELINUX_H */

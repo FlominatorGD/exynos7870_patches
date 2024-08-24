@@ -1,0 +1,19 @@
+diff --git a/security/proca/proca_certificate.asn1 b/security/proca/proca_certificate.asn1
+new file mode 100644
+index 000000000000..78be3c180db9
+--- /dev/null
++++ b/security/proca/proca_certificate.asn1
+@@ -0,0 +1,13 @@
++PaCertificate ::= SEQUENCE {
++  paData             PaData,
++  signature          OCTET STRING
++}
++
++PaData ::= SEQUENCE {
++  paVersion              INTEGER,
++  paFlags                INTEGER ({ proca_certificate_get_flags }),
++  paKeyId                INTEGER,
++  paId                   OCTET STRING,
++  paAppName              OCTET STRING ({ proca_certificate_get_app_name }),
++  fiveSignatureHash      OCTET STRING ({ proca_certificate_get_five_signature_hash })
++}

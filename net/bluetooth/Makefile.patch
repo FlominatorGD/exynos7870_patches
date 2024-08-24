@@ -1,0 +1,18 @@
+diff --git a/net/bluetooth/Makefile b/net/bluetooth/Makefile
+index 886e9aa3ecf1..4f3c9a79e968 100644
+--- a/net/bluetooth/Makefile
++++ b/net/bluetooth/Makefile
+@@ -3,10 +3,10 @@
+ #
+ 
+ obj-$(CONFIG_BT)	+= bluetooth.o
+-obj-$(CONFIG_BT_RFCOMM)	+= rfcomm/
+-obj-$(CONFIG_BT_BNEP)	+= bnep/
++#obj-$(CONFIG_BT_RFCOMM)	+= rfcomm/
++#obj-$(CONFIG_BT_BNEP)	+= bnep/
+ obj-$(CONFIG_BT_CMTP)	+= cmtp/
+-obj-$(CONFIG_BT_HIDP)	+= hidp/
++#obj-$(CONFIG_BT_HIDP)	+= hidp/
+ obj-$(CONFIG_BT_6LOWPAN) += bluetooth_6lowpan.o
+ 
+ bluetooth_6lowpan-y := 6lowpan.o

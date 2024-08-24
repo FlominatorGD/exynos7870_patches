@@ -1,0 +1,17 @@
+diff --git a/drivers/block/zram/Kconfig b/drivers/block/zram/Kconfig
+index 6489c0fd0ea6..3e174112869c 100644
+--- a/drivers/block/zram/Kconfig
++++ b/drivers/block/zram/Kconfig
+@@ -1,9 +1,9 @@
+ config ZRAM
+ 	tristate "Compressed RAM block device support"
+ 	depends on BLOCK && SYSFS && ZSMALLOC
+-	select LZO_COMPRESS
+-	select LZO_DECOMPRESS
+-	default n
++	select LZ4_COMPRESS
++	select LZ4_DECOMPRESS
++	default y
+ 	help
+ 	  Creates virtual block devices called /dev/zramX (X = 0, 1, ...).
+ 	  Pages written to these disks are compressed and stored in memory

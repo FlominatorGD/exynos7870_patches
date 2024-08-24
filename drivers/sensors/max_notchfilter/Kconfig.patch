@@ -1,0 +1,19 @@
+diff --git a/drivers/sensors/max_notchfilter/Kconfig b/drivers/sensors/max_notchfilter/Kconfig
+new file mode 100755
+index 000000000000..566622e186ce
+--- /dev/null
++++ b/drivers/sensors/max_notchfilter/Kconfig
+@@ -0,0 +1,13 @@
++#
++# sensor drivers configuration
++#
++config SENSORS_MAX_NOTCHFILTER
++	tristate "Sensors Maxim Notch Filter"
++	default n
++	depends on SENSORS_MAX86902
++	help
++	  Max Notch filter file for HR test in sensor driver.
++          If you say yes here you get Notch Filter support for
++	  HR test.
++	  To compile this driver as a module, choose M here: the
++	  module will be called Max86902.

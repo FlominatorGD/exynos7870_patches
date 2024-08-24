@@ -1,0 +1,8 @@
+diff --git a/drivers/mailbox/samsung/Makefile b/drivers/mailbox/samsung/Makefile
+new file mode 100644
+index 000000000000..a9cc22b2c983
+--- /dev/null
++++ b/drivers/mailbox/samsung/Makefile
+@@ -0,0 +1,2 @@
++# SAMSUNG MAILBOX API
++obj-$(CONFIG_EXYNOS8890_APM)	+= mailbox-exynos8.o apm-exynos.o apm-exynos8890.o

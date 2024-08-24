@@ -1,0 +1,11 @@
+diff --git a/lib/raid6/.gitignore b/lib/raid6/.gitignore
+deleted file mode 100644
+index 0a7e494b2bcd..000000000000
+--- a/lib/raid6/.gitignore
++++ /dev/null
+@@ -1,5 +0,0 @@
+-mktables
+-altivec*.c
+-int*.c
+-tables.c
+-neon?.c

@@ -1,0 +1,14 @@
+diff --git a/drivers/staging/comedi/drivers/dt282x.c b/drivers/staging/comedi/drivers/dt282x.c
+index cd9ec60abc24..cc974a5e5cf6 100644
+--- a/drivers/staging/comedi/drivers/dt282x.c
++++ b/drivers/staging/comedi/drivers/dt282x.c
+@@ -580,8 +580,7 @@ static irqreturn_t dt282x_interrupt(int irq, void *d)
+ 	}
+ #endif
+ 	cfc_handle_events(dev, s);
+-	if (s_ao)
+-		cfc_handle_events(dev, s_ao);
++	cfc_handle_events(dev, s_ao);
+ 
+ 	return IRQ_RETVAL(handled);
+ }

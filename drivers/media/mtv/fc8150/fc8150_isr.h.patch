@@ -1,0 +1,28 @@
+diff --git a/drivers/media/mtv/fc8150/fc8150_isr.h b/drivers/media/mtv/fc8150/fc8150_isr.h
+new file mode 100755
+index 000000000000..d7f10981adaf
+--- /dev/null
++++ b/drivers/media/mtv/fc8150/fc8150_isr.h
+@@ -0,0 +1,22 @@
++
++#ifndef __FC8150_ISR__
++#define __FC8150_ISR__
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++#include "fci_types.h"
++
++extern u32 gACUserData;
++extern u32 gTSUserData;
++
++extern int (*pACCallback)(u32 userdata, u8 *data, int length);
++extern int (*pTSCallback)(u32 userdata, u8 *data, int length);
++
++extern void fc8150_isr(HANDLE hDevice);
++
++#ifdef __cplusplus
++}
++#endif
++#endif

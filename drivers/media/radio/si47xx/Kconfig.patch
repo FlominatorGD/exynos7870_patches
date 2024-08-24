@@ -1,0 +1,18 @@
+diff --git a/drivers/media/radio/si47xx/Kconfig b/drivers/media/radio/si47xx/Kconfig
+new file mode 100644
+index 000000000000..e1a96ce7fda4
+--- /dev/null
++++ b/drivers/media/radio/si47xx/Kconfig
+@@ -0,0 +1,12 @@
++config FM_SI47XX
++	tristate "si47XX FM radio"
++	default n
++	help
++	  Say Y to supprot Si47XX FM radio.
++
++config FM_SI47XX_RDS_INT_ON_ALWAYS
++	tristate "si47XX FM radio"
++	depends on FM_SI47XX
++	default n
++	help
++	  Say Y to support Si47XX FM RDS INTERRUT ON ALWAYS.

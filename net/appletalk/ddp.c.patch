@@ -1,0 +1,16 @@
+diff --git a/net/appletalk/ddp.c b/net/appletalk/ddp.c
+index cdc194327cb4..ccb5bf773d6e 100644
+--- a/net/appletalk/ddp.c
++++ b/net/appletalk/ddp.c
+@@ -1029,11 +1029,6 @@ static int atalk_create(struct net *net, struct socket *sock, int protocol,
+ 	 */
+ 	if (sock->type != SOCK_RAW && sock->type != SOCK_DGRAM)
+ 		goto out;
+-
+-	rc = -EPERM;
+-	if (sock->type == SOCK_RAW && !kern && !capable(CAP_NET_RAW))
+-		goto out;
+-
+ 	rc = -ENOMEM;
+ 	sk = sk_alloc(net, PF_APPLETALK, GFP_KERNEL, &ddp_proto);
+ 	if (!sk)

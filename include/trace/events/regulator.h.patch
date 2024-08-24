@@ -1,0 +1,18 @@
+diff --git a/include/trace/events/regulator.h b/include/trace/events/regulator.h
+index 37502a7404b7..7dae3fae2b4c 100644
+--- a/include/trace/events/regulator.h
++++ b/include/trace/events/regulator.h
+@@ -61,6 +61,13 @@ DEFINE_EVENT(regulator_basic, regulator_disable,
+ 
+ );
+ 
++DEFINE_EVENT(regulator_basic, regulator_disable_delay,
++
++	TP_PROTO(const char *name),
++
++	TP_ARGS(name)
++
++);
+ DEFINE_EVENT(regulator_basic, regulator_disable_complete,
+ 
+ 	TP_PROTO(const char *name),

@@ -1,0 +1,29 @@
+diff --git a/arch/arm64/boot/dts/exynos7870-rmem-2000MB_secure-camera.dtsi b/arch/arm64/boot/dts/exynos7870-rmem-2000MB_secure-camera.dtsi
+new file mode 100755
+index 000000000000..ad35549875c5
+--- /dev/null
++++ b/arch/arm64/boot/dts/exynos7870-rmem-2000MB_secure-camera.dtsi
+@@ -0,0 +1,23 @@
++/*
++ * SAMSUNG EXYNOS device tree source for reserved-memory
++ *
++ * Copyright (c) 2015 Samsung Electronics Co., Ltd.
++ *		http://www.samsung.com
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++*/
++
++#include "exynos7870-rmem-2000MB.dtsi"
++
++/ {
++	reserved-memory {
++		secure_camera {
++			compatible = "exynos8890-ion,secure_camera";
++			secure;
++			reg = <0x0 0x89000000 0x1D00000>;
++			id = <11>;
++		};
++	};
++};

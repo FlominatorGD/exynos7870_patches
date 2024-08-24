@@ -1,0 +1,16 @@
+diff --git a/drivers/usb/serial/usb-serial.c b/drivers/usb/serial/usb-serial.c
+index 16833ffedcfb..80fe398b4d62 100644
+--- a/drivers/usb/serial/usb-serial.c
++++ b/drivers/usb/serial/usb-serial.c
+@@ -314,7 +314,10 @@ static void serial_cleanup(struct tty_struct *tty)
+ 	serial = port->serial;
+ 	owner = serial->type->driver.owner;
+ 
+-	usb_autopm_put_interface(serial->interface);
++	mutex_lock(&serial->disc_mutex);
++	if (!serial->disconnected)
++		usb_autopm_put_interface(serial->interface);
++	mutex_unlock(&serial->disc_mutex);
+ 
+ 	usb_serial_put(serial);
+ 	module_put(owner);

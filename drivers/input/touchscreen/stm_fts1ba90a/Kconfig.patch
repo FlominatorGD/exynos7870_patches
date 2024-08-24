@@ -1,0 +1,18 @@
+diff --git a/drivers/input/touchscreen/stm_fts1ba90a/Kconfig b/drivers/input/touchscreen/stm_fts1ba90a/Kconfig
+new file mode 100644
+index 000000000000..bde4f0196efc
+--- /dev/null
++++ b/drivers/input/touchscreen/stm_fts1ba90a/Kconfig
+@@ -0,0 +1,12 @@
++#
++# STMicroelectronics TOUCH driver configuration
++#
++
++config TOUCHSCREEN_FTS1BA90A
++	tristate "STMicroelectronics i2c multitouch touchscreen with FingerTipS"
++	depends on I2C
++	help
++		Say Y here to enable STMicroelectronics touchscreen support.
++		If unsure, say N.
++		To compile this driver as a module, choose M here: the
++		module will be called STM_ts.

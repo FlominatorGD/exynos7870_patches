@@ -1,0 +1,32 @@
+diff --git a/drivers/media/mtv/fc8150/fc8150_tun.h b/drivers/media/mtv/fc8150/fc8150_tun.h
+new file mode 100755
+index 000000000000..64a715cb124b
+--- /dev/null
++++ b/drivers/media/mtv/fc8150/fc8150_tun.h
+@@ -0,0 +1,26 @@
++/*****************************************************************************
++ Copyright(c) 2012 FCI Inc. All Rights Reserved
++
++ File name : fc8150_tun.c
++
++ Description : fc8150 tuner control driver
++
++*******************************************************************************/
++
++#ifndef __FC8150_TUN__
++#define __FC8150_TUN__
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++extern int fc8150_tuner_init(HANDLE hDevice, enum band_type band);
++extern int fc8150_set_freq(HANDLE hDevice, enum band_type band, u32 f_lo);
++extern int fc8150_get_rssi(HANDLE hDevice, int *rssi);
++extern int fc8150_tuner_deinit(HANDLE hDevice);
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif

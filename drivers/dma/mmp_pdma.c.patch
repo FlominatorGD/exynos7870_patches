@@ -1,0 +1,13 @@
+diff --git a/drivers/dma/mmp_pdma.c b/drivers/dma/mmp_pdma.c
+index a1a4db5721b8..a7b186d536b3 100644
+--- a/drivers/dma/mmp_pdma.c
++++ b/drivers/dma/mmp_pdma.c
+@@ -601,7 +601,7 @@ static struct dma_async_tx_descriptor *
+ mmp_pdma_prep_dma_cyclic(struct dma_chan *dchan,
+ 			 dma_addr_t buf_addr, size_t len, size_t period_len,
+ 			 enum dma_transfer_direction direction,
+-			 unsigned long flags)
++			 unsigned long flags, void *context)
+ {
+ 	struct mmp_pdma_chan *chan;
+ 	struct mmp_pdma_desc_sw *first = NULL, *prev = NULL, *new;

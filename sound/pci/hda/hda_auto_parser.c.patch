@@ -1,0 +1,22 @@
+diff --git a/sound/pci/hda/hda_auto_parser.c b/sound/pci/hda/hda_auto_parser.c
+index c12e2545c46b..a8d1ae0cb154 100644
+--- a/sound/pci/hda/hda_auto_parser.c
++++ b/sound/pci/hda/hda_auto_parser.c
+@@ -798,8 +798,6 @@ static void apply_fixup(struct hda_codec *codec, int id, int action, int depth)
+ 	while (id >= 0) {
+ 		const struct hda_fixup *fix = codec->fixup_list + id;
+ 
+-		if (++depth > 10)
+-			break;
+ 		if (fix->chained_before)
+ 			apply_fixup(codec, fix->chain_id, action, depth + 1);
+ 
+@@ -839,6 +837,8 @@ static void apply_fixup(struct hda_codec *codec, int id, int action, int depth)
+ 		}
+ 		if (!fix->chained || fix->chained_before)
+ 			break;
++		if (++depth > 10)
++			break;
+ 		id = fix->chain_id;
+ 	}
+ }

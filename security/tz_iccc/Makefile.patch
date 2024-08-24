@@ -1,0 +1,12 @@
+diff --git a/security/tz_iccc/Makefile b/security/tz_iccc/Makefile
+new file mode 100644
+index 000000000000..f7863331f222
+--- /dev/null
++++ b/security/tz_iccc/Makefile
+@@ -0,0 +1,5 @@
++#
++# Makefile for TZ ICCC.
++#
++
++obj-$(CONFIG_TZ_ICCC)   += tz_iccc.o
+\ No newline at end of file

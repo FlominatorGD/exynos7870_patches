@@ -1,0 +1,14 @@
+diff --git a/security/smack/smack_lsm.c b/security/smack/smack_lsm.c
+index 9655128278a1..7ac0705bee83 100644
+--- a/security/smack/smack_lsm.c
++++ b/security/smack/smack_lsm.c
+@@ -699,8 +699,7 @@ static int smack_bprm_set_creds(struct linux_binprm *bprm)
+ 
+ 		if (rc != 0)
+ 			return rc;
+-	}
+-	if (bprm->unsafe & ~LSM_UNSAFE_PTRACE)
++	} else if (bprm->unsafe)
+ 		return -EPERM;
+ 
+ 	bsp->smk_task = isp->smk_task;

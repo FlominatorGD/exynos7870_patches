@@ -1,0 +1,13 @@
+diff --git a/arch/mips/Kconfig b/arch/mips/Kconfig
+index 077ae203e8f9..a3ee1d37b015 100644
+--- a/arch/mips/Kconfig
++++ b/arch/mips/Kconfig
+@@ -2051,7 +2051,7 @@ config MIPS_CMP
+ 
+ config MIPS_CPS
+ 	bool "MIPS Coherent Processing System support"
+-	depends on SYS_SUPPORTS_MIPS_CPS
++	depends on SYS_SUPPORTS_MIPS_CPS && !64BIT
+ 	select MIPS_CM
+ 	select MIPS_CPC
+ 	select MIPS_CPS_PM if HOTPLUG_CPU

@@ -1,0 +1,12 @@
+diff --git a/arch/arm/configs/s3c2410_defconfig b/arch/arm/configs/s3c2410_defconfig
+index 6e084afc7743..f3142369f594 100644
+--- a/arch/arm/configs/s3c2410_defconfig
++++ b/arch/arm/configs/s3c2410_defconfig
+@@ -354,6 +354,7 @@ CONFIG_USB_EMI62=m
+ CONFIG_USB_EMI26=m
+ CONFIG_USB_ADUTUX=m
+ CONFIG_USB_SEVSEG=m
++CONFIG_USB_RIO500=m
+ CONFIG_USB_LEGOTOWER=m
+ CONFIG_USB_LCD=m
+ CONFIG_USB_LED=m

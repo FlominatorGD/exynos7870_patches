@@ -1,0 +1,16 @@
+diff --git a/include/linux/hall.h b/include/linux/hall.h
+new file mode 100644
+index 000000000000..a6abd0099727
+--- /dev/null
++++ b/include/linux/hall.h
+@@ -0,0 +1,10 @@
++#ifndef _HALL_H
++#define _HALL_H
++struct hall_platform_data {
++	unsigned int rep:1;		/* enable input subsystem auto repeat */
++	int gpio_flip_cover;
++	int gpio_certify_cover;
++};
++extern struct device *sec_key;
++
++#endif /* _HALL_H */

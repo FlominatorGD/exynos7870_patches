@@ -1,0 +1,26 @@
+diff --git a/fs/f2fs/xattr.h b/fs/f2fs/xattr.h
+index 2909c9241145..595d2af00a58 100644
+--- a/fs/f2fs/xattr.h
++++ b/fs/f2fs/xattr.h
+@@ -71,8 +71,6 @@ struct f2fs_xattr_entry {
+ 				entry = XATTR_NEXT_ENTRY(entry))
+ #define VALID_XATTR_BLOCK_SIZE	(PAGE_SIZE - sizeof(struct node_footer))
+ #define XATTR_PADDING_SIZE	(sizeof(__u32))
+-#define XATTR_SIZE(x,i)		(((x) ? VALID_XATTR_BLOCK_SIZE : 0) +	\
+-						(inline_xattr_size(i)))
+ #define MIN_OFFSET(i)		XATTR_ALIGN(inline_xattr_size(i) +	\
+ 						VALID_XATTR_BLOCK_SIZE)
+ 
+@@ -80,12 +78,6 @@ struct f2fs_xattr_entry {
+ 				sizeof(struct f2fs_xattr_header) -	\
+ 				sizeof(struct f2fs_xattr_entry))
+ 
+-#define MAX_INLINE_XATTR_SIZE						\
+-			(DEF_ADDRS_PER_INODE -				\
+-			F2FS_TOTAL_EXTRA_ATTR_SIZE / sizeof(__le32) -	\
+-			DEF_INLINE_RESERVED_SIZE -			\
+-			MIN_INLINE_DENTRY_SIZE / sizeof(__le32))
+-
+ /*
+  * On-disk structure of f2fs_xattr
+  * We use inline xattrs space + 1 block for xattr.

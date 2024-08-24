@@ -1,0 +1,20 @@
+diff --git a/drivers/pci/host/Kconfig b/drivers/pci/host/Kconfig
+index 3dc25fad490c..424a9e4c50ac 100644
+--- a/drivers/pci/host/Kconfig
++++ b/drivers/pci/host/Kconfig
+@@ -20,10 +20,14 @@ config PCIE_DW
+ 
+ config PCI_EXYNOS
+ 	bool "Samsung Exynos PCIe controller"
+-	depends on SOC_EXYNOS5440
++	depends on SOC_EXYNOS8890
+ 	select PCIEPORTBUS
+ 	select PCIE_DW
+ 
++config PCI_EXYNOS_TEST
++	bool "EXYNOS PCIe driver test"
++	depends on PCI_EXYNOS
++
+ config PCI_IMX6
+ 	bool "Freescale i.MX6 PCIe controller"
+ 	depends on SOC_IMX6Q

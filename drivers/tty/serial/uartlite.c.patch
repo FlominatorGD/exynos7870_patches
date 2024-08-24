@@ -1,0 +1,14 @@
+diff --git a/drivers/tty/serial/uartlite.c b/drivers/tty/serial/uartlite.c
+index 58d795ca0861..a0099a7f60d4 100644
+--- a/drivers/tty/serial/uartlite.c
++++ b/drivers/tty/serial/uartlite.c
+@@ -701,8 +701,7 @@ err_uart:
+ static void __exit ulite_exit(void)
+ {
+ 	platform_driver_unregister(&ulite_platform_driver);
+-	if (ulite_uart_driver.state)
+-		uart_unregister_driver(&ulite_uart_driver);
++	uart_unregister_driver(&ulite_uart_driver);
+ }
+ 
+ module_init(ulite_init);

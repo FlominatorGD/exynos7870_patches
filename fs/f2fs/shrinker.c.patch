@@ -1,0 +1,12 @@
+diff --git a/fs/f2fs/shrinker.c b/fs/f2fs/shrinker.c
+index a467aca29cfe..9e13db994fdf 100644
+--- a/fs/f2fs/shrinker.c
++++ b/fs/f2fs/shrinker.c
+@@ -135,6 +135,6 @@ void f2fs_leave_shrinker(struct f2fs_sb_info *sbi)
+ 	f2fs_shrink_extent_tree(sbi, __count_extent_cache(sbi));
+ 
+ 	spin_lock(&f2fs_list_lock);
+-	list_del_init(&sbi->s_list);
++	list_del(&sbi->s_list);
+ 	spin_unlock(&f2fs_list_lock);
+ }

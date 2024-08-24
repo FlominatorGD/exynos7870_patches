@@ -1,0 +1,16 @@
+diff --git a/drivers/misc/gnss_if/Makefile b/drivers/misc/gnss_if/Makefile
+new file mode 100644
+index 000000000000..0ec1f00e975d
+--- /dev/null
++++ b/drivers/misc/gnss_if/Makefile
+@@ -0,0 +1,10 @@
++# Makefile of gnss_if
++
++# obj-$(CONFIG_GNSS_SHMEM_IF) += gnss_main.o gnss_io_device.o gnss_link_device_shmem.o \
++#						gnss_keplerctl_device.o gnss_utils.o
++
++obj-$(CONFIG_GNSS_SHMEM_IF) += gnss_main.o gnss_io_device.o \
++						gnss_keplerctl_device.o \
++						gnss_link_device_shmem.o \
++						gnss_link_device_memory.o pmu-gnss.o \
++						gnss_utils.o

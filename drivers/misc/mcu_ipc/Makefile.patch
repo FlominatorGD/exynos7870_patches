@@ -1,0 +1,12 @@
+diff --git a/drivers/misc/mcu_ipc/Makefile b/drivers/misc/mcu_ipc/Makefile
+new file mode 100644
+index 000000000000..5b23d9945d61
+--- /dev/null
++++ b/drivers/misc/mcu_ipc/Makefile
+@@ -0,0 +1,6 @@
++#
++# MCU_IPC Device Driver
++#
++
++obj-$(CONFIG_MCU_IPC)	+= mcu_ipc.o
++obj-$(CONFIG_SHM_IPC)	+= shm_ipc.o

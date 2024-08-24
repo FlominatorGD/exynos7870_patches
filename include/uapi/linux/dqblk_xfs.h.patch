@@ -1,0 +1,12 @@
+diff --git a/include/uapi/linux/dqblk_xfs.h b/include/uapi/linux/dqblk_xfs.h
+index dcd75cc26196..11b3b31faf14 100644
+--- a/include/uapi/linux/dqblk_xfs.h
++++ b/include/uapi/linux/dqblk_xfs.h
+@@ -39,6 +39,7 @@
+ #define Q_XQUOTARM	XQM_CMD(6)	/* free disk space used by dquots */
+ #define Q_XQUOTASYNC	XQM_CMD(7)	/* delalloc flush, updates dquots */
+ #define Q_XGETQSTATV	XQM_CMD(8)	/* newer version of get quota */
++#define Q_XGETNEXTQUOTA	XQM_CMD(9)	/* get disk limits and usage >= ID */
+ 
+ /*
+  * fs_disk_quota structure:

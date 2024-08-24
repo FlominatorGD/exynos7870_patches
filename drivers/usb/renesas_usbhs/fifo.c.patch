@@ -1,0 +1,13 @@
+diff --git a/drivers/usb/renesas_usbhs/fifo.c b/drivers/usb/renesas_usbhs/fifo.c
+index a1fb3493c268..a8230472d66c 100644
+--- a/drivers/usb/renesas_usbhs/fifo.c
++++ b/drivers/usb/renesas_usbhs/fifo.c
+@@ -100,7 +100,7 @@ static void __usbhsf_pkt_del(struct usbhs_pkt *pkt)
+ 	list_del_init(&pkt->node);
+ }
+ 
+-struct usbhs_pkt *__usbhsf_pkt_get(struct usbhs_pipe *pipe)
++static struct usbhs_pkt *__usbhsf_pkt_get(struct usbhs_pipe *pipe)
+ {
+ 	if (list_empty(&pipe->list))
+ 		return NULL;

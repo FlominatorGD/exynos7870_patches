@@ -1,0 +1,17 @@
+diff --git a/security/selinux/netport.c b/security/selinux/netport.c
+index 3311cc393cb4..95d4dd5afd45 100644
+--- a/security/selinux/netport.c
++++ b/security/selinux/netport.c
+@@ -237,6 +237,12 @@ void sel_netport_flush(void)
+ static __init int sel_netport_init(void)
+ {
+ 	int iter;
++	
++// [ SEC_SELINUX_PORTING_COMMON
++#ifdef CONFIG_SECURITY_SELINUX_ALWAYS_ENFORCE
++	selinux_enabled = 1;
++#endif
++// ] SEC_SELINUX_PORTING_COMMON
+ 
+ 	if (!selinux_enabled)
+ 		return 0;

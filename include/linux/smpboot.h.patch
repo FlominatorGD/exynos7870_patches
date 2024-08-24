@@ -1,0 +1,13 @@
+diff --git a/include/linux/smpboot.h b/include/linux/smpboot.h
+index b2d986e3fe77..13e929679550 100644
+--- a/include/linux/smpboot.h
++++ b/include/linux/smpboot.h
+@@ -31,7 +31,7 @@ struct smpboot_thread_data;
+  * @thread_comm:	The base name of the thread
+  */
+ struct smp_hotplug_thread {
+-	struct task_struct		* __percpu *store;
++	struct task_struct __percpu	**store;
+ 	struct list_head		list;
+ 	int				(*thread_should_run)(unsigned int cpu);
+ 	void				(*thread_fn)(unsigned int cpu);

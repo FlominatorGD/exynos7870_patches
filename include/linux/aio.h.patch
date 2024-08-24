@@ -1,0 +1,12 @@
+diff --git a/include/linux/aio.h b/include/linux/aio.h
+index d9c92daa3944..e42ea91cb2be 100644
+--- a/include/linux/aio.h
++++ b/include/linux/aio.h
+@@ -34,6 +34,7 @@ struct kiocb {
+ 	struct kioctx		*ki_ctx;	/* NULL for sync ops */
+ 	kiocb_cancel_fn		*ki_cancel;
+ 	void			*private;
++	int ki_flags;
+ 
+ 	union {
+ 		void __user		*user;

@@ -1,0 +1,15 @@
+diff --git a/security/tima_uevent/tima_uevent.h b/security/tima_uevent/tima_uevent.h
+new file mode 100644
+index 000000000000..c1c1b6352d35
+--- /dev/null
++++ b/security/tima_uevent/tima_uevent.h
+@@ -0,0 +1,9 @@
++#ifndef TIMA_UEVENT_H
++#define TIMA_UEVENT_H
++
++#define TIMA_UEVENT_DEV     "tima_uevent"
++
++extern int dm_uevent_init(void);
++extern void dm_uevent_exit(void);
++
++#endif	/* TIMA_UEVENT_H */

@@ -1,0 +1,13 @@
+diff --git a/drivers/md/persistent-data/dm-space-map-metadata.c b/drivers/md/persistent-data/dm-space-map-metadata.c
+index 27fac0fc0012..f5a29cd19173 100644
+--- a/drivers/md/persistent-data/dm-space-map-metadata.c
++++ b/drivers/md/persistent-data/dm-space-map-metadata.c
+@@ -238,7 +238,7 @@ static int out(struct sm_metadata *smm)
+ 	}
+ 
+ 	if (smm->recursion_count == 1)
+-		r = apply_bops(smm);
++		apply_bops(smm);
+ 
+ 	smm->recursion_count--;
+ 

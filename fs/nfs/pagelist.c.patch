@@ -1,0 +1,13 @@
+diff --git a/fs/nfs/pagelist.c b/fs/nfs/pagelist.c
+index 7d0a66fca2cd..865c1c27f2a2 100644
+--- a/fs/nfs/pagelist.c
++++ b/fs/nfs/pagelist.c
+@@ -115,7 +115,7 @@ __nfs_iocounter_wait(struct nfs_io_counter *c)
+ 		set_bit(NFS_IO_INPROGRESS, &c->flags);
+ 		if (atomic_read(&c->io_count) == 0)
+ 			break;
+-		ret = nfs_wait_bit_killable(&q.key);
++		ret = nfs_wait_bit_killable(&q.key, TASK_KILLABLE);
+ 	} while (atomic_read(&c->io_count) != 0 && !ret);
+ 	finish_wait(wq, &q.wait);
+ 	return ret;

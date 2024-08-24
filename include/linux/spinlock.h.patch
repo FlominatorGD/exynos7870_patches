@@ -1,0 +1,13 @@
+diff --git a/include/linux/spinlock.h b/include/linux/spinlock.h
+index 262ba4ef9a8e..7465e81cfb8a 100644
+--- a/include/linux/spinlock.h
++++ b/include/linux/spinlock.h
+@@ -56,7 +56,7 @@
+ #include <linux/stringify.h>
+ #include <linux/bottom_half.h>
+ #include <asm/barrier.h>
+-
++#include <linux/exynos-ss.h>
+ 
+ /*
+  * Must define these before including other files, inline functions need them

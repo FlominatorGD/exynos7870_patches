@@ -1,0 +1,19 @@
+diff --git a/drivers/staging/samsung/sec_notifier/Makefile b/drivers/staging/samsung/sec_notifier/Makefile
+new file mode 100644
+index 000000000000..71468795abf7
+--- /dev/null
++++ b/drivers/staging/samsung/sec_notifier/Makefile
+@@ -0,0 +1,13 @@
++# drivers/staging/samsung/sec_notifier/Makefile
++#
++# Copyright (c) 2010-2011 Samsung Electronics Co., Ltd.
++#		http://www.samsung.com/
++#
++# Licensed under GPLv2
++
++obj-y				:=
++obj-m				:=
++obj-n				:=
++obj-				:=
++
++obj-$(CONFIG_VBUS_NOTIFIER)	+= vbus_notifier.o

@@ -1,0 +1,17 @@
+diff --git a/drivers/cpuidle/Kconfig.arm64 b/drivers/cpuidle/Kconfig.arm64
+index d0a08ed1b2ee..ee4469ca7dc6 100644
+--- a/drivers/cpuidle/Kconfig.arm64
++++ b/drivers/cpuidle/Kconfig.arm64
+@@ -12,3 +12,12 @@ config ARM64_CPUIDLE
+ 	  at run-time through DT nodes. The CPUidle suspend backend is
+ 	  initialized by calling the CPU operations init idle hook
+ 	  provided by architecture code.
++
++config ARM64_EXYNOS_CPUIDLE
++	bool "Cpu Idle Driver for the ARM64 Exynos processors"
++	depends on ARCH_EXYNOS
++	select ARM64_CPU_SUSPEND
++	select CPU_IDLE_MULTIPLE_DRIVERS
++	select DT_IDLE_STATES
++	help
++	  Select this to enable cpuidle for ARM64 Exynos processors.

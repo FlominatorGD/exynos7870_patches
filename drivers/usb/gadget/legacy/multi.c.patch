@@ -1,0 +1,44 @@
+diff --git a/drivers/usb/gadget/legacy/multi.c b/drivers/usb/gadget/legacy/multi.c
+index 72d41a4e6e3d..f7605ba502e4 100644
+--- a/drivers/usb/gadget/legacy/multi.c
++++ b/drivers/usb/gadget/legacy/multi.c
+@@ -151,6 +151,7 @@ static struct usb_function *f_msg_rndis;
+ 
+ static __init int rndis_do_config(struct usb_configuration *c)
+ {
++	struct fsg_opts *fsg_opts;
+ 	int ret;
+ 
+ 	if (gadget_is_otg(c->cdev->gadget)) {
+@@ -182,6 +183,11 @@ static __init int rndis_do_config(struct usb_configuration *c)
+ 		goto err_fsg;
+ 	}
+ 
++	fsg_opts = fsg_opts_from_func_inst(fi_msg);
++	ret = fsg_common_run_thread(fsg_opts->common);
++	if (ret)
++		goto err_run;
++
+ 	ret = usb_add_function(c, f_msg_rndis);
+ 	if (ret)
+ 		goto err_run;
+@@ -233,6 +239,7 @@ static struct usb_function *f_msg_multi;
+ 
+ static __init int cdc_do_config(struct usb_configuration *c)
+ {
++	struct fsg_opts *fsg_opts;
+ 	int ret;
+ 
+ 	if (gadget_is_otg(c->cdev->gadget)) {
+@@ -265,6 +272,11 @@ static __init int cdc_do_config(struct usb_configuration *c)
+ 		goto err_fsg;
+ 	}
+ 
++	fsg_opts = fsg_opts_from_func_inst(fi_msg);
++	ret = fsg_common_run_thread(fsg_opts->common);
++	if (ret)
++		goto err_run;
++
+ 	ret = usb_add_function(c, f_msg_multi);
+ 	if (ret)
+ 		goto err_run;

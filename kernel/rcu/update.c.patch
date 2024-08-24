@@ -1,0 +1,13 @@
+diff --git a/kernel/rcu/update.c b/kernel/rcu/update.c
+index 3ef8ba58694e..946b0a152aaf 100644
+--- a/kernel/rcu/update.c
++++ b/kernel/rcu/update.c
+@@ -509,7 +509,7 @@ static void check_holdout_task(struct task_struct *t,
+ 	if (!needreport)
+ 		return;
+ 	if (*firstreport) {
+-		pr_err("INFO: rcu_tasks detected stalls on tasks:\n");
++		pr_auto(ASL1, "INFO: rcu_tasks detected stalls on tasks:\n");
+ 		*firstreport = false;
+ 	}
+ 	cpu = task_cpu(t);

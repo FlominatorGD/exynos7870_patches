@@ -1,0 +1,13 @@
+diff --git a/drivers/pwm/Kconfig b/drivers/pwm/Kconfig
+index ef2dd2e4754b..7f3bb47181aa 100644
+--- a/drivers/pwm/Kconfig
++++ b/drivers/pwm/Kconfig
+@@ -235,7 +235,7 @@ config PWM_ROCKCHIP
+ 
+ config PWM_SAMSUNG
+ 	tristate "Samsung PWM support"
+-	depends on PLAT_SAMSUNG
++	depends on ARCH_EXYNOS
+ 	help
+ 	  Generic PWM framework driver for Samsung.
+ 

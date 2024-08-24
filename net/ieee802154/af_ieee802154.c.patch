@@ -1,0 +1,14 @@
+diff --git a/net/ieee802154/af_ieee802154.c b/net/ieee802154/af_ieee802154.c
+index 69d22a3651f9..29e0de63001b 100644
+--- a/net/ieee802154/af_ieee802154.c
++++ b/net/ieee802154/af_ieee802154.c
+@@ -252,9 +252,6 @@ static int ieee802154_create(struct net *net, struct socket *sock,
+ 
+ 	switch (sock->type) {
+ 	case SOCK_RAW:
+-		rc = -EPERM;
+-		if (!capable(CAP_NET_RAW))
+-			goto out;
+ 		proto = &ieee802154_raw_prot;
+ 		ops = &ieee802154_raw_ops;
+ 		break;

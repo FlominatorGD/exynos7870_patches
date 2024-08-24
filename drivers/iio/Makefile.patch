@@ -1,0 +1,19 @@
+diff --git a/drivers/iio/Makefile b/drivers/iio/Makefile
+index 698afc2d17ce..4afef955b3f4 100644
+--- a/drivers/iio/Makefile
++++ b/drivers/iio/Makefile
+@@ -2,7 +2,7 @@
+ # Makefile for the industrial I/O core.
+ #
+ 
+-obj-$(CONFIG_IIO) += industrialio.o
++obj-$(CONFIG_IIO) += industrialio.o alarm.o
+ industrialio-y := industrialio-core.o industrialio-event.o inkern.o
+ industrialio-$(CONFIG_IIO_BUFFER) += industrialio-buffer.o
+ industrialio-$(CONFIG_IIO_TRIGGER) += industrialio-trigger.o
+@@ -27,3 +27,4 @@ obj-y += pressure/
+ obj-y += proximity/
+ obj-y += temperature/
+ obj-y += trigger/
++obj-y += inv_test/
+\ No newline at end of file

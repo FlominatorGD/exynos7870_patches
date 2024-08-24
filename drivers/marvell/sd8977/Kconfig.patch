@@ -1,0 +1,11 @@
+diff --git a/drivers/marvell/sd8977/Kconfig b/drivers/marvell/sd8977/Kconfig
+new file mode 100755
+index 000000000000..2cab529a8f91
+--- /dev/null
++++ b/drivers/marvell/sd8977/Kconfig
+@@ -0,0 +1,5 @@
++config MRVL_SDIO_OOB_IRQ
++	depends on MRVL_WL_SD8977
++	bool "SDIO OOB IRQ"
++	---help---
++	  SDIO OOB interrupt support

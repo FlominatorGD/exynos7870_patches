@@ -1,0 +1,14 @@
+diff --git a/net/sched/sch_codel.c b/net/sched/sch_codel.c
+index 5faf3b1356d0..0d60ea5a5bb6 100644
+--- a/net/sched/sch_codel.c
++++ b/net/sched/sch_codel.c
+@@ -68,8 +68,7 @@ static struct sk_buff *dequeue(struct codel_vars *vars, struct Qdisc *sch)
+ {
+ 	struct sk_buff *skb = __skb_dequeue(&sch->q);
+ 
+-	if (skb)
+-		prefetch(&skb->end); /* we'll need skb_shinfo() */
++	prefetch(&skb->end); /* we'll need skb_shinfo() */
+ 	return skb;
+ }
+ 

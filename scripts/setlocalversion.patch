@@ -1,0 +1,12 @@
+diff --git a/scripts/setlocalversion b/scripts/setlocalversion
+index 63d91e22ed7c..d6b7dfcae08c 100755
+--- a/scripts/setlocalversion
++++ b/scripts/setlocalversion
+@@ -167,7 +167,6 @@ else
+ 	# LOCALVERSION= is not specified
+ 	if test "${LOCALVERSION+set}" != "set"; then
+ 		scm=$(scm_version --short)
+-		res="$res${scm:++}"
+ 	fi
+ fi
+ 

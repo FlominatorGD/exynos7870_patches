@@ -1,0 +1,14 @@
+diff --git a/drivers/mmc/card/Makefile b/drivers/mmc/card/Makefile
+index c73b406a06cd..3304e7c531f7 100644
+--- a/drivers/mmc/card/Makefile
++++ b/drivers/mmc/card/Makefile
+@@ -4,6 +4,9 @@
+ 
+ obj-$(CONFIG_MMC_BLOCK)		+= mmc_block.o
+ mmc_block-objs			:= block.o queue.o
++ifeq ($(CONFIG_MMC_CPRM),y)
++mmc_block-objs			+= cprmdrv_samsung.o
++endif
+ obj-$(CONFIG_MMC_TEST)		+= mmc_test.o
+ 
+ obj-$(CONFIG_SDIO_UART)		+= sdio_uart.o

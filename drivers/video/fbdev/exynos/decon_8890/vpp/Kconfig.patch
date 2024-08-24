@@ -1,0 +1,12 @@
+diff --git a/drivers/video/fbdev/exynos/decon_8890/vpp/Kconfig b/drivers/video/fbdev/exynos/decon_8890/vpp/Kconfig
+new file mode 100644
+index 000000000000..78d09eda724d
+--- /dev/null
++++ b/drivers/video/fbdev/exynos/decon_8890/vpp/Kconfig
+@@ -0,0 +1,6 @@
++config EXYNOS_VPP
++	bool "Samsung Exynos Video Post Processor driver"
++	depends on EXYNOS_DECON_8890
++	default y
++	help
++	  Enable VPP driver.

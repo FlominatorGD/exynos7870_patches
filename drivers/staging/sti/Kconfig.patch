@@ -1,0 +1,13 @@
+diff --git a/drivers/staging/sti/Kconfig b/drivers/staging/sti/Kconfig
+new file mode 100644
+index 000000000000..0e716e099992
+--- /dev/null
++++ b/drivers/staging/sti/Kconfig
+@@ -0,0 +1,7 @@
++config SEC_STI
++	tristate "Samsung STI(System Test Infra)"
++	default n
++	help
++		Drivers to support Samsung STI(System Test Infra).
++
++source "drivers/staging/sti/abc/Kconfig"

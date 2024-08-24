@@ -1,0 +1,14 @@
+diff --git a/drivers/mmc/card/Kconfig b/drivers/mmc/card/Kconfig
+index 6142ec1b9dfb..b1e7a3f39020 100644
+--- a/drivers/mmc/card/Kconfig
++++ b/drivers/mmc/card/Kconfig
+@@ -80,3 +80,9 @@ config MMC_SIMULATE_MAX_SPEED
+ 	  control the write or read maximum KB/second speed behaviors.
+ 
+ 	  If unsure, say N here.
++	  
++config MMC_CPRM
++	tristate "MMC CPRM driver"
++	default n
++	help
++	  Say Y here to enable the MMC cprm driver

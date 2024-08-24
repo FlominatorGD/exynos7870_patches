@@ -1,0 +1,8 @@
+diff --git a/drivers/marvell/sd8977/mbtc_src/config/bt_cal_data.conf b/drivers/marvell/sd8977/mbtc_src/config/bt_cal_data.conf
+new file mode 100755
+index 000000000000..bceb34421643
+--- /dev/null
++++ b/drivers/marvell/sd8977/mbtc_src/config/bt_cal_data.conf
+@@ -0,0 +1,2 @@
++ 00 1C FA 37 FF FF FF FF 00 0D 7F 01 CE BA 00 00 
++ 00 2D C6 C0 00 00 00 00 00 F0 00 00

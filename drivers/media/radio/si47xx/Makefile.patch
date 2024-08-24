@@ -1,0 +1,13 @@
+diff --git a/drivers/media/radio/si47xx/Makefile b/drivers/media/radio/si47xx/Makefile
+new file mode 100644
+index 000000000000..ab1f6c571e31
+--- /dev/null
++++ b/drivers/media/radio/si47xx/Makefile
+@@ -0,0 +1,7 @@
++#
++# Makefile for the kernel FM Radio device drivers.
++#
++# Object files in subdirectories
++
++obj-$(CONFIG_FM_SI47XX) += si47xx-drv.o
++si47xx-drv-y := si47xx_i2c.o si47xx_dev.o

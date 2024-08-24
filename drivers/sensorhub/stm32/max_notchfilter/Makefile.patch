@@ -1,0 +1,12 @@
+diff --git a/drivers/sensorhub/stm32/max_notchfilter/Makefile b/drivers/sensorhub/stm32/max_notchfilter/Makefile
+new file mode 100755
+index 000000000000..3a9b8f5f36e1
+--- /dev/null
++++ b/drivers/sensorhub/stm32/max_notchfilter/Makefile
+@@ -0,0 +1,6 @@
++#
++# Makefile for the sensor drivers.
++#
++
++# Each configuration option enables a list of files.
++obj-$(CONFIG_SENSORS_MAX_NOTCHFILTER)	+= downsample.o fixed_fir_filter.o  fixed_iir_filter.o

@@ -1,0 +1,11 @@
+diff --git a/drivers/media/platform/exynos/fimc-is2/sensor/csi/Makefile b/drivers/media/platform/exynos/fimc-is2/sensor/csi/Makefile
+new file mode 100644
+index 000000000000..b1cd0a814df6
+--- /dev/null
++++ b/drivers/media/platform/exynos/fimc-is2/sensor/csi/Makefile
+@@ -0,0 +1,5 @@
++obj-$(CONFIG_CSIS_V3_2) += fimc-is-hw-csi-v3_2.o
++obj-$(CONFIG_CSIS_V3_4) += fimc-is-hw-csi-v3_4.o
++
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2
++EXTRA_CFLAGS += -Idrivers/media/platform/exynos/fimc-is2/include

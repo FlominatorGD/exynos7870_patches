@@ -1,0 +1,14 @@
+diff --git a/drivers/media/platform/exynos/mdev/Kconfig b/drivers/media/platform/exynos/mdev/Kconfig
+new file mode 100644
+index 000000000000..15134b0d50e0
+--- /dev/null
++++ b/drivers/media/platform/exynos/mdev/Kconfig
+@@ -0,0 +1,8 @@
++config EXYNOS_MEDIA_DEVICE
++	bool
++	depends on MEDIA_EXYNOS
++	select MEDIA_CONTROLLER
++	select VIDEO_V4L2_SUBDEV_API
++	default y
++	help
++	  This is a v4l2 driver for exynos media device.

@@ -1,0 +1,7 @@
+diff --git a/drivers/video/fbdev/exynos/decon_8890/panels/Makefile b/drivers/video/fbdev/exynos/decon_8890/panels/Makefile
+new file mode 100644
+index 000000000000..0e56c04d3f3e
+--- /dev/null
++++ b/drivers/video/fbdev/exynos/decon_8890/panels/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_EXYNOS_DECON_LCD_S6E3HA2K)	+= s6e3ha2k_mipi_lcd.o s6e3ha2k_lcd_ctrl.o

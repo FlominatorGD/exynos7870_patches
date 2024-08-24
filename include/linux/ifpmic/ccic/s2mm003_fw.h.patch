@@ -1,0 +1,11 @@
+diff --git a/include/linux/ifpmic/ccic/s2mm003_fw.h b/include/linux/ifpmic/ccic/s2mm003_fw.h
+new file mode 100644
+index 000000000000..58bd91de1411
+--- /dev/null
++++ b/include/linux/ifpmic/ccic/s2mm003_fw.h
+@@ -0,0 +1,5 @@
++#ifndef _S2MM003_FW_H
++#define _S2MM003_FW_H
++void s2mm003_firmware_ver_check(struct s2mm003_data *usbpd_data, char *name);
++int s2mm003_firmware_update(struct s2mm003_data *usbpd_data);
++#endif

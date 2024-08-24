@@ -1,0 +1,16 @@
+diff --git a/drivers/gud/gud-exynos7870/sec-os-booster/Kconfig b/drivers/gud/gud-exynos7870/sec-os-booster/Kconfig
+new file mode 100644
+index 000000000000..a3021a53a5b7
+--- /dev/null
++++ b/drivers/gud/gud-exynos7870/sec-os-booster/Kconfig
+@@ -0,0 +1,10 @@
++#
++# Secure OS control configuration
++#
++config SECURE_OS_BOOSTER_API
++	bool "Secure OS booster API"
++	depends on TRUSTONIC_TEE
++	---help---
++	  The secure OS booster API is used for secure OS performance
++	  enhancement. It can migrate a core that executes secure OS tasks
++	  and lock CPU frequency.

@@ -1,0 +1,13 @@
+diff --git a/arch/arm64/include/asm/hardirq.h b/arch/arm64/include/asm/hardirq.h
+index 0af4cdb4b5a9..40b73088e805 100644
+--- a/arch/arm64/include/asm/hardirq.h
++++ b/arch/arm64/include/asm/hardirq.h
+@@ -20,7 +20,7 @@
+ #include <linux/threads.h>
+ #include <asm/irq.h>
+ 
+-#define NR_IPI	6
++#define NR_IPI	7
+ 
+ typedef struct {
+ 	unsigned int __softirq_pending;

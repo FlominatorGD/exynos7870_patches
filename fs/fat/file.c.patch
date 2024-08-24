@@ -1,0 +1,15 @@
+diff --git a/fs/fat/file.c b/fs/fat/file.c
+index f2dcfd4fcfa2..cbf322590454 100644
+--- a/fs/fat/file.c
++++ b/fs/fat/file.c
+@@ -464,4 +464,10 @@ EXPORT_SYMBOL_GPL(fat_setattr);
+ const struct inode_operations fat_file_inode_operations = {
+ 	.setattr	= fat_setattr,
+ 	.getattr	= fat_getattr,
++#ifdef CONFIG_FAT_VIRTUAL_XATTR
++	.setxattr	= fat_setxattr,
++	.getxattr	= fat_getxattr,
++	.listxattr	= fat_listxattr,
++	.removexattr	= fat_removexattr,
++#endif
+ };

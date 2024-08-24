@@ -1,0 +1,7 @@
+diff --git a/net/ncm/Makefile b/net/ncm/Makefile
+new file mode 100644
+index 000000000000..fd42213818df
+--- /dev/null
++++ b/net/ncm/Makefile
+@@ -0,0 +1 @@
++obj-$(CONFIG_KNOX_NCM) := ncm.o

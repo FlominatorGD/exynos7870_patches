@@ -1,0 +1,14 @@
+diff --git a/fs/overlayfs/inode.c b/fs/overlayfs/inode.c
+index 1175efa5e956..a01ec1836a72 100644
+--- a/fs/overlayfs/inode.c
++++ b/fs/overlayfs/inode.c
+@@ -265,8 +265,7 @@ static bool ovl_can_list(const char *s)
+ 		return true;
+ 
+ 	/* Never list trusted.overlay, list other trusted for superuser only */
+-	return !ovl_is_private_xattr(s) &&
+-	       has_capability_noaudit(current, CAP_SYS_ADMIN);
++	return !ovl_is_private_xattr(s) && capable(CAP_SYS_ADMIN);
+ }
+ 
+ ssize_t ovl_listxattr(struct dentry *dentry, char *list, size_t size)

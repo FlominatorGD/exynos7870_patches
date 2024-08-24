@@ -1,0 +1,13 @@
+diff --git a/net/sched/sch_dsmark.c b/net/sched/sch_dsmark.c
+index 48cac0167504..eb87a2a94d19 100644
+--- a/net/sched/sch_dsmark.c
++++ b/net/sched/sch_dsmark.c
+@@ -354,8 +354,6 @@ static int dsmark_init(struct Qdisc *sch, struct nlattr *opt)
+ 		goto errout;
+ 
+ 	err = -EINVAL;
+-	if (!tb[TCA_DSMARK_INDICES])
+-		goto errout;
+ 	indices = nla_get_u16(tb[TCA_DSMARK_INDICES]);
+ 
+ 	if (hweight32(indices) != 1)

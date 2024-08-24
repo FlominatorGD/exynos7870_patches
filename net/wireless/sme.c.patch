@@ -1,0 +1,13 @@
+diff --git a/net/wireless/sme.c b/net/wireless/sme.c
+index dc1668ff543b..c157f8b9b64f 100644
+--- a/net/wireless/sme.c
++++ b/net/wireless/sme.c
+@@ -110,6 +110,8 @@ static int cfg80211_conn_scan(struct wireless_dev *wdev)
+ 		wdev->conn->params.ssid_len);
+ 	request->ssids[0].ssid_len = wdev->conn->params.ssid_len;
+ 
++	eth_broadcast_addr(request->bssid);
++
+ 	request->wdev = wdev;
+ 	request->wiphy = &rdev->wiphy;
+ 	request->scan_start = jiffies;

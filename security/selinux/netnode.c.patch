@@ -1,0 +1,17 @@
+diff --git a/security/selinux/netnode.c b/security/selinux/netnode.c
+index da923f89d2a9..69731791f828 100644
+--- a/security/selinux/netnode.c
++++ b/security/selinux/netnode.c
+@@ -303,6 +303,12 @@ void sel_netnode_flush(void)
+ static __init int sel_netnode_init(void)
+ {
+ 	int iter;
++	
++// [ SEC_SELINUX_PORTING_COMMON
++#ifdef CONFIG_SECURITY_SELINUX_ALWAYS_ENFORCE
++	selinux_enabled = 1;
++#endif
++// ] SEC_SELINUX_PORTING_COMMON
+ 
+ 	if (!selinux_enabled)
+ 		return 0;

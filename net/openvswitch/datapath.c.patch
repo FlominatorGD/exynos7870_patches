@@ -1,0 +1,13 @@
+diff --git a/net/openvswitch/datapath.c b/net/openvswitch/datapath.c
+index 72beb58b64e2..a09f7d9ded1b 100644
+--- a/net/openvswitch/datapath.c
++++ b/net/openvswitch/datapath.c
+@@ -1982,7 +1982,7 @@ static const struct nla_policy vport_policy[OVS_VPORT_ATTR_MAX + 1] = {
+ 	[OVS_VPORT_ATTR_STATS] = { .len = sizeof(struct ovs_vport_stats) },
+ 	[OVS_VPORT_ATTR_PORT_NO] = { .type = NLA_U32 },
+ 	[OVS_VPORT_ATTR_TYPE] = { .type = NLA_U32 },
+-	[OVS_VPORT_ATTR_UPCALL_PID] = { .type = NLA_UNSPEC },
++	[OVS_VPORT_ATTR_UPCALL_PID] = { .type = NLA_U32 },
+ 	[OVS_VPORT_ATTR_OPTIONS] = { .type = NLA_NESTED },
+ };
+ 

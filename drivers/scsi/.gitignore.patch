@@ -1,0 +1,7 @@
+diff --git a/drivers/scsi/.gitignore b/drivers/scsi/.gitignore
+deleted file mode 100644
+index c89ae9a04399..000000000000
+--- a/drivers/scsi/.gitignore
++++ /dev/null
+@@ -1 +0,0 @@
+-53c700_d.h

@@ -1,0 +1,11 @@
+diff --git a/drivers/misc/uart_sel/Makefile b/drivers/misc/uart_sel/Makefile
+new file mode 100644
+index 000000000000..e74e5f77cacd
+--- /dev/null
++++ b/drivers/misc/uart_sel/Makefile
+@@ -0,0 +1,5 @@
++#
++# UART_SWITCH Device Driver
++#
++
++obj-$(CONFIG_UART_SEL)	+= uart_sel.o

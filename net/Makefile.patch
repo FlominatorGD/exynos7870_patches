@@ -1,0 +1,9 @@
+diff --git a/net/Makefile b/net/Makefile
+index 550c1123047b..ddc7e60da4e8 100644
+--- a/net/Makefile
++++ b/net/Makefile
+@@ -74,3 +74,4 @@ obj-$(CONFIG_VSOCKETS)	+= vmw_vsock/
+ obj-$(CONFIG_NET_MPLS_GSO)	+= mpls/
+ obj-$(CONFIG_HSR)		+= hsr/
+ obj-$(CONFIG_NET_ACTIVITY_STATS)		+= activity_stats.o
++obj-$(CONFIG_KNOX_NCM)	+= ncm/

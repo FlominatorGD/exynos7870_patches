@@ -1,0 +1,22 @@
+diff --git a/drivers/gud/gud-exynos8890/sec-os-booster/Makefile b/drivers/gud/gud-exynos8890/sec-os-booster/Makefile
+new file mode 100644
+index 000000000000..267176ad1a1e
+--- /dev/null
++++ b/drivers/gud/gud-exynos8890/sec-os-booster/Makefile
+@@ -0,0 +1,16 @@
++#
++# Makefile for Secure OS booster API
++#
++obj-$(CONFIG_SECURE_OS_BOOSTER_API) += sec_os_booster.o
++
++# MobiCore kernel driver path
++GUD_ROOT_FOLDER := drivers/gud/gud-exynos8890
++
++# Choose one platform from the folder
++MOBICORE_PLATFORM := $(shell (ls -1 $(GUD_ROOT_FOLDER)/MobiCoreDriver/platforms | tail -1) )
++# Use the available platform folder
++ccflags-y += -I$(GUD_ROOT_FOLDER)/MobiCoreDriver/platforms/$(MOBICORE_PLATFORM)
++
++# Includes MobiCore kernel driver
++ccflags-y += -I$(GUD_ROOT_FOLDER)/MobiCoreDriver
++ccflags-y += -I$(GUD_ROOT_FOLDER)/MobiCoreDriver/public

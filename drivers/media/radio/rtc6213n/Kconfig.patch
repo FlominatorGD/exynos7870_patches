@@ -1,0 +1,18 @@
+diff --git a/drivers/media/radio/rtc6213n/Kconfig b/drivers/media/radio/rtc6213n/Kconfig
+new file mode 100644
+index 000000000000..b04c46123ea3
+--- /dev/null
++++ b/drivers/media/radio/rtc6213n/Kconfig
+@@ -0,0 +1,12 @@
++config I2C_RTC6213N
++	tristate "Richwave RTC6213N FM Radio Receiver support with I2C"
++	depends on I2C && RADIO_RTC6213N
++	---help---
++	  This is a driver for I2C devices with the Richwave RTC6213N
++	  chip.
++
++	  Say Y here if you want to connect this type of radio to your
++	  computer's I2C port.
++
++	  To compile this driver as a module, choose M here: the
++	  module will be called radio-i2c-RTC6213N.

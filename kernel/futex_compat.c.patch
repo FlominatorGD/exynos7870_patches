@@ -1,0 +1,13 @@
+diff --git a/kernel/futex_compat.c b/kernel/futex_compat.c
+index 4ae3232e7a28..55c8c9349cfe 100644
+--- a/kernel/futex_compat.c
++++ b/kernel/futex_compat.c
+@@ -155,7 +155,7 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
+ 	}
+ 
+ 	ret = -EPERM;
+-	if (!ptrace_may_access(p, PTRACE_MODE_READ_REALCREDS))
++	if (!ptrace_may_access(p, PTRACE_MODE_READ))
+ 		goto err_unlock;
+ 
+ 	head = p->compat_robust_list;

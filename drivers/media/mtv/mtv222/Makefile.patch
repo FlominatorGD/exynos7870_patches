@@ -1,0 +1,17 @@
+diff --git a/drivers/media/mtv/mtv222/Makefile b/drivers/media/mtv/mtv222/Makefile
+new file mode 100755
+index 000000000000..680d924df553
+--- /dev/null
++++ b/drivers/media/mtv/mtv222/Makefile
+@@ -0,0 +1,11 @@
++##########################################
++# Makefile for MTV222 Device Drivers.
++##########################################
++ccflags-y += -Idrivers/media/mtv
++ccflags-y += -Idrivers/media/mtv/mtv222
++
++obj-y += raontv.o
++obj-y += raontv_isdbt.o
++obj-y += raontv_rf.o
++obj-y += raontv_port.o
++

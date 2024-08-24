@@ -1,0 +1,15 @@
+diff --git a/drivers/input/touchscreen/zinitix/Makefile b/drivers/input/touchscreen/zinitix/Makefile
+new file mode 100755
+index 000000000000..f56ca742e4f0
+--- /dev/null
++++ b/drivers/input/touchscreen/zinitix/Makefile
+@@ -0,0 +1,8 @@
++#
++# Makefile for the Zinitix Touchscreen driver
++#
++
++obj-$(CONFIG_TOUCHSCREEN_ZINITIX_BT532)	+= zinitix_bt532_ts.o
++obj-$(CONFIG_TOUCHSCREEN_ZINITIX_BT541C)	+= zinitix_bt532_ts.o
++obj-$(CONFIG_TOUCHSCREEN_ZINITIX_ZT75XX)	+= zinitix_bt532_ts.o
++obj-$(CONFIG_TOUCHSCREEN_ZINITIX_ZT75XX_TCLM)	+= zinitix_zt75xx_ts.o
+\ No newline at end of file

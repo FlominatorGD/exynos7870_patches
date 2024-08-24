@@ -1,0 +1,4 @@
+diff --git a/security/samsung/defex_lsm/cert/x509_five_user.der b/security/samsung/defex_lsm/cert/x509_five_user.der
+new file mode 100644
+index 000000000000..7c15ba096276
+Binary files /dev/null and b/security/samsung/defex_lsm/cert/x509_five_user.der differ

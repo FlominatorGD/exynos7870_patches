@@ -1,0 +1,15 @@
+diff --git a/include/linux/cpuidle.h b/include/linux/cpuidle.h
+index 90851a969d4b..0649e65a2efe 100644
+--- a/include/linux/cpuidle.h
++++ b/include/linux/cpuidle.h
+@@ -115,6 +115,10 @@ struct cpuidle_driver {
+ 
+ 	/* the driver handles the cpus in cpumask */
+ 	struct cpumask		*cpumask;
++
++#ifdef CONFIG_CPU_IDLE_GOV_MENU
++	bool 			skip_correction;
++#endif
+ };
+ 
+ #ifdef CONFIG_CPU_IDLE
